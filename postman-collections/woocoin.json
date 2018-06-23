@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "20cf1013-906b-4edc-b8f2-3555535815be",
+    "name": "WooCoin",
+    "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "e176a692-5178-4d77-b1fb-aa3747344423",
+      "name": "woocoin-api legacy collection",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "7e7f02bc-e746-42b4-abff-dc9594539049",
+          "name": "getBalance",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "http://{{domain}}:{{port}}/balance/{{address}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "996554d9-de7e-4287-8477-696c97c7655e",
+          "name": "addBalance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": "http://{{domain}}:{{port}}/balance/{{address}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "557f95ef-d1da-4b9e-a64a-ae26f7a90de3",
+          "name": "getBalance of contract address",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "url": "http://{{domain}}:{{port}}/balance/0x627306090abaB3A6e1400e9345bC60c78a8BEf57"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5d64ca93-b73e-41a4-b226-966543f983a3",
+          "name": "createWallet",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8eee6174-6cf1-4854-9594-6a7be7883bea",
+                "type": "text/javascript",
+                "exec": [
+                  "var _ = require('lodash');",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "",
+                  "pm.environment.set(\"address\", jsonData.address);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{}"
+            },
+            "url": "http://{{domain}}:{{port}}/wallet"
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "c4ad169d-76c7-4b57-bfe2-51b1763c98d7",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "4054b3f1-702e-4620-9f12-dcad27ae11b5",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "e3022be7-b25f-4b74-82d9-2b8367380d9c",
+      "name": "users",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "4a742dea-4f99-45b6-ba2b-2065fe6e7ae6",
+          "name": "create user",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-paypal-user-id",
+                "value": "testCorpId"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/users"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "7c325695-3b7b-4bee-afda-b54d43776954",
+      "name": "downstream",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "f4b412d4-c0ab-45ab-b0d3-810386dabf56",
+          "name": "bridge api",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "",
+                "value": ""
+              }
+            ],
+            "body": {},
+            "url": "https://bridge.paypalcorp.com/searchsvc/profile/orghierarchy/knguyen1"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

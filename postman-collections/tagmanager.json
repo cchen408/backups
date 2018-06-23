@@ -1,0 +1,632 @@
+{
+  "info": {
+    "_postman_id": "9e6ab27a-c3da-4a1d-e7eb-c8a299cd560f",
+    "name": "Tag Manager",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "746ff714-4a79-6d1a-ee52-7f0a95b6b8df",
+      "name": "containers",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "aafb2e01-5b21-fd89-79ce-e35b7a233c4c",
+          "name": "CREATE Container",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var _ = require('lodash');",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var links = _.get(jsonData, 'links');",
+                  "var link = _.head(links);",
+                  "if(link){",
+                  "    var href = _.get(link, 'href');",
+                  "    var s = _.split(href, '/');",
+                  "    var id = _.last(s);",
+                  "    postman.setEnvironmentVariable(\"containerId\", id);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demoooooo\",\n    \"url\": \"npm.paypal{{$guid}}.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"application_context\": {\n        \"bn_code\": \"ITECH_SHOPIFY\",\n        \"partner_name\": \"SHOPIFY\"\n    },\n    \"tags\": [\n        {\n            \"tag_definition_id\": \"analytics\",\n            \"weight\": \"333\",\n            \"enabled\": true,\n            \"configuration\": [\n                {\n                    \"id\": \"analytics-id\",\n                    \"value\": \"test_value2\"\n                }\n            ]\n        },\n        {\n            \"tag_definition_id\": \"credit\",\n            \"weight\": \"444\",\n            \"enabled\": true,\n            \"configuration\": [\n                {\n                    \"id\": \"limit\",\n                    \"value\": \"test_value3\"\n                }\n            ]\n        }\n\n    ]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "327885dd-6e5e-093b-98f6-c46ae00708c1",
+          "name": "CREATE Container sandbox auth",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var _ = require('lodash');",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var links = _.get(jsonData, 'links');",
+                  "var link = _.head(links);",
+                  "if(link){",
+                  "    var href = _.get(link, 'href');",
+                  "    var s = _.split(href, '/');",
+                  "    var id = _.last(s);",
+                  "    postman.setEnvironmentVariable(\"containerId\", id);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"owner_id\": \"EDFMQVX5UWQLY\",\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demoooooo\",\n    \"url\":\"www.paypal.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"tags\": [{\n        \"tag_definition_id\": \"analytics\",\n        \"weight\": \"333\",\n        \"enabled\": true,\n        \"configuration\": [{\n          \"id\": \"analytics-id\",\n          \"value\": \"test_value2\"\n        }]\n      },\n        {\n          \"tag_definition_id\": \"credit\",\n          \"weight\": \"444\",\n          \"enabled\": true,\n          \"configuration\": [{\n            \"id\": \"limit\",\n            \"value\": \"test_value3\"\n        }]\n      }]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a8ea53bf-988f-3097-2413-d8f45a74e25b",
+          "name": "GET All Containers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\",\"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \n   \"market\":{\n     \"product_line\":\"PRO30\",\n      \"country_code\":\"AU\"\n   },\n   \"boarding_type\":\"ORGANIC\",\n   \"bundle_type\":\"KNUCKLE_BUSTER\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2f8d4a4f-94e0-d91d-8ce1-55c30778d3ff",
+          "name": "GET Container",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "64ae624a-4c1a-1db8-fd05-5751b32f2203",
+          "name": "PATCH Container",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/name\",\n        \"value\": \"new name\"\n    },\n    {\n        \"op\": \"replace\",\n        \"path\": \"/published\",\n        \"value\": true\n    }\n]"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ef6aa52f-0cb5-0880-a0de-30370a1530c0",
+          "name": "DELETE Container",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\",\"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ce6d5323-618c-4ac2-aff4-1152a029b090",
+          "name": "CREATE Container live",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var _ = require('lodash');",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var links = _.get(jsonData, 'links');",
+                  "var link = _.head(links);",
+                  "if(link){",
+                  "    var href = _.get(link, 'href');",
+                  "    var s = _.split(href, '/');",
+                  "    var id = _.last(s);",
+                  "    postman.setEnvironmentVariable(\"containerId\", id);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"owner_id\": \"EDFMQVX5UWQLY\",\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demoooooo\",\n    \"url\":\"www.paypal.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"tags\": [{\n        \"tag_definition_id\": \"analytics\",\n        \"weight\": \"333\",\n        \"enabled\": true,\n        \"configuration\": [{\n          \"id\": \"analytics-id\",\n          \"value\": \"test_value2\"\n        }]\n      },\n        {\n          \"tag_definition_id\": \"credit\",\n          \"weight\": \"444\",\n          \"enabled\": true,\n          \"configuration\": [{\n            \"id\": \"limit\",\n            \"value\": \"test_value3\"\n        }]\n      }]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "6ba6c3bf-8d0d-11c9-b35f-b5e568289f14",
+      "name": "tags",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "cc31ad2f-4a8b-2b52-00df-aa1a54be70b4",
+          "name": "CREATE Tag",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var _ = require('lodash');",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var links = _.get(jsonData, 'links');",
+                  "var link = _.head(links);",
+                  "if(link){",
+                  "    var href = _.get(link, 'href');",
+                  "    var s = _.split(href, '/');",
+                  "    var id = _.last(s);",
+                  "    postman.setEnvironmentVariable(\"tagId\", id);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\",\"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"tag_definition_id\": \"cart-recovery\",\n    \"weight\": \"22\",\n    \"enabled\": true\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}/tags"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a775478c-8a15-6462-2c90-89daf1711fd1",
+          "name": "GET Tag",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [ \"*\",    \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \n   \"market\":{\n     \"product_line\":\"PRO30\",\n      \"country_code\":\"AU\"\n   },\n   \"boarding_type\":\"ORGANIC\",\n   \"bundle_type\":\"KNUCKLE_BUSTER\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}/tags/{{tagId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b4417790-cafc-0634-8235-d64fd5f569c7",
+          "name": "GET All Tags",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}/tags"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b02bf5e5-a282-0841-d3bc-c1d06d55c61a",
+          "name": "PATCH Tag",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\",\"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/enabled\",\n        \"value\": true\n    }\n   \n]"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}/tags/{{tagId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "c7dc9323-d2b6-cd93-9719-1514e1a03004",
+          "name": "DELETE Tag",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\",\"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}/tags/{{tagId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "1fc29f9c-e9f1-8019-07e3-26400823aaf9",
+      "name": "resources",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "1a66ddbd-87fc-96b9-5ce0-8ad675a222e5",
+          "name": "GET All Resources",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"owner_id\": \"EDFMQVX5UWQLY\",\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demo\",\n    \"url\":\"www.paypal.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"tags\": [{\n        \"tag_definition_id\": \"analytics\",\n        \"weight\": \"333\",\n        \"enabled\": true,\n        \"configuration\": [{\n          \"id\": \"analytics-id\",\n          \"value\": \"test_value2\"\n        }],\n        \"triggers\": [\"trigger_id_2\", \"trigger_id_3\"]\n      },\n        {\n          \"tag_definition_id\": \"credit\",\n          \"weight\": \"444\",\n          \"enabled\": true,\n          \"configuration\": [{\n            \"id\": \"limit\",\n            \"value\": \"test_value3\"\n        }]\n      }],\n    \"triggers\": [{\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_2\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_2\",\n          \"value\": \"test_value\"\n        },\n        {\n          \"id\": \"test_config_4\",\n          \"value\": \"test_value\"\n        }]\n      },\n      {\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_3\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_3\",\n          \"value\": \"test_value\"\n        }]\n      }]\n}"
+            },
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/v1/offers/resources?merchant_id={{encryptedAccountNumber}}",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "v1",
+                "offers",
+                "resources"
+              ],
+              "query": [
+                {
+                  "key": "merchant_id",
+                  "value": "{{encryptedAccountNumber}}",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d8bb1b36-ca25-2171-7cdd-e4114a04d2ee",
+          "name": "GET Resource",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"EDFMQVX5UWQLY\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"owner_id\": \"EDFMQVX5UWQLY\",\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demo\",\n    \"url\":\"www.paypal.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"tags\": [{\n        \"tag_definition_id\": \"analytics\",\n        \"weight\": \"333\",\n        \"enabled\": true,\n        \"configuration\": [{\n          \"id\": \"analytics-id\",\n          \"value\": \"test_value2\"\n        }],\n        \"triggers\": [\"trigger_id_2\", \"trigger_id_3\"]\n      },\n        {\n          \"tag_definition_id\": \"credit\",\n          \"weight\": \"444\",\n          \"enabled\": true,\n          \"configuration\": [{\n            \"id\": \"limit\",\n            \"value\": \"test_value3\"\n        }]\n      }],\n    \"triggers\": [{\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_2\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_2\",\n          \"value\": \"test_value\"\n        },\n        {\n          \"id\": \"test_config_4\",\n          \"value\": \"test_value\"\n        }]\n      },\n      {\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_3\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_3\",\n          \"value\": \"test_value\"\n        }]\n      }]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/resources/{{resourceId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "7baa478d-fbbd-7b8d-2e2d-f557741dcc74",
+          "name": "PATCH Resource",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"EDFMQVX5UWQLY\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/full_url\",\n        \"value\": \"www.paypal.com\"\n    }\n]"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/resources/{{resourceId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "bfc6145e-79e2-1149-8bfd-301cf2cc6403",
+          "name": "CREATE Resource",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var _ = require('lodash');",
+                  "",
+                  "var jsonData = JSON.parse(responseBody);",
+                  "var links = _.get(jsonData, 'links');",
+                  "var link = _.head(links);",
+                  "if(link){",
+                  "    var href = _.get(link, 'href');",
+                  "    var s = _.split(href, '/');",
+                  "    var id = _.last(s);",
+                  "    postman.setEnvironmentVariable(\"resourceId\", id);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n      \"id\": \"test2.com\",\n      \"merchant_id\": \"{{encryptedAccountNumber}}\",\n      \"full_url\": \"http://www.xyz.com/prodcuts/1/checkout?id=4\",\n      \"application_context\":{\n        \"source\" : \"hermesnodeweb\",\n        \"country_code\": \"US\",\n        \"region_code\": \"NY\",\n        \"channel\": \"WEB\"\n      }\n    }"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/resources"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0bf5a828-cd44-f961-6956-1ef73caafab8",
+          "name": "GET Resource copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"EDFMQVX5UWQLY\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"owner_id\": \"EDFMQVX5UWQLY\",\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demo\",\n    \"url\":\"www.paypal.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"tags\": [{\n        \"tag_definition_id\": \"analytics\",\n        \"weight\": \"333\",\n        \"enabled\": true,\n        \"configuration\": [{\n          \"id\": \"analytics-id\",\n          \"value\": \"test_value2\"\n        }],\n        \"triggers\": [\"trigger_id_2\", \"trigger_id_3\"]\n      },\n        {\n          \"tag_definition_id\": \"credit\",\n          \"weight\": \"444\",\n          \"enabled\": true,\n          \"configuration\": [{\n            \"id\": \"limit\",\n            \"value\": \"test_value3\"\n        }]\n      }],\n    \"triggers\": [{\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_2\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_2\",\n          \"value\": \"test_value\"\n        },\n        {\n          \"id\": \"test_config_4\",\n          \"value\": \"test_value\"\n        }]\n      },\n      {\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_3\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_3\",\n          \"value\": \"test_value\"\n        }]\n      }]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/resources/{{resourceId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1cd7d9e6-c632-1e52-7655-67d053e0dbba",
+          "name": "DELETE Resource",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"2260518959189500388\", \"account_number\":\"2260518959189500388\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"2260518959189500388\", \"encrypted_account_number\":\"EDFMQVX5UWQLY\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{domain}}:{{port}}/v1/offers/resources/{{resourceId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "e7244462-48d7-03ee-9820-94cef67d7763",
+      "name": "products",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "f0a4d3b5-6871-0c2d-8e7d-896e19d96a34",
+          "name": "GET products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"\", \"account_number\":\"\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"owner_id\": \"EDFMQVX5UWQLY\",\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demo\",\n    \"url\":\"www.paypal.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"tags\": [{\n        \"tag_definition_id\": \"analytics\",\n        \"weight\": \"333\",\n        \"enabled\": true,\n        \"configuration\": [{\n          \"id\": \"analytics-id\",\n          \"value\": \"test_value2\"\n        }],\n        \"triggers\": [\"trigger_id_2\", \"trigger_id_3\"]\n      },\n        {\n          \"tag_definition_id\": \"credit\",\n          \"weight\": \"444\",\n          \"enabled\": true,\n          \"configuration\": [{\n            \"id\": \"limit\",\n            \"value\": \"test_value3\"\n        }]\n      }],\n    \"triggers\": [{\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_2\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_2\",\n          \"value\": \"test_value\"\n        },\n        {\n          \"id\": \"test_config_4\",\n          \"value\": \"test_value\"\n        }]\n      },\n      {\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_3\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_3\",\n          \"value\": \"test_value\"\n        }]\n      }]\n}"
+            },
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/v1/offers/products?country_code=US",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "v1",
+                "offers",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "country_code",
+                  "value": "US",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "4506d730-4d11-4f5a-8c22-e942ea2fdea0",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "b76f21a2-7ae3-4511-a8a2-e15c2aabb0b6",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "_postman_id": "d3e42cea-9326-2e25-f690-8c18248898b3",
+      "name": "GET Container copy",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-PAYPAL-SECURITY-CONTEXT",
+            "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+          }
+        ],
+        "body": {},
+        "url": "https://{{domain}}:{{port}}/v1/offers/containers/{{containerId}}"
+      },
+      "response": []
+    }
+  ]
+}

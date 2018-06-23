@@ -1,0 +1,252 @@
+{
+  "info": {
+    "_postman_id": "b6ede242-ba6a-2842-ac9d-f9ea1493285c",
+    "name": "Tax",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "f80c25a4-e837-de9f-6e7f-ea6d8e60445f",
+      "name": "CREATE",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "",
+              "if(jsonData.id){",
+              "    postman.setEnvironmentVariable(\"taxId\", jsonData.id);    ",
+              "}",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-PAYPAL-SECURITY-CONTEXT",
+            "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",         \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "do_not_write",
+            "value": "true",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"test_tax_new_christopher_chen {{$guid}}\", \n\t\"rate\": \"8.6\", \n\t\"segment\":\"INVOICE\", \n\t\"default\": \"false\"\n}"
+        },
+        "url": "https://{{domain}}:{{port}}/{{version}}/taxes/merchant-tax-rates"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "ff7f0a23-4dfc-4b9a-bb7b-56ad720d21a3",
+      "name": "CREATE Copy",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "",
+              "if(jsonData.id){",
+              "    postman.setEnvironmentVariable(\"taxId\", jsonData.id);    ",
+              "}",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "X-PAYPAL-SECURITY-CONTEXT",
+            "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",         \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "do_not_write",
+            "value": "true",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"test_tax_new_christopher_chen {{$guid}}\", \n\t\"rate\": \"8.6\", \n\t\"segment\":\"INVOICE\", \n\t\"default\": \"false\"\n}"
+        },
+        "url": "https://{{domain}}:{{port}}/{{version}}/taxes/merchant-tax-rates"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "471f80bc-5559-9976-2782-d05a24c307b1",
+      "name": "GET",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-PAYPAL-SECURITY-CONTEXT",
+            "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",         \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}",
+            "disabled": true
+          }
+        ],
+        "body": {},
+        "url": "https://{{domain}}:{{port}}/{{version}}/taxes/merchant-tax-rates/{{taxId}}"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "286f7a51-66a5-0790-7f0b-935bad20d92c",
+      "name": "UPDATE",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "",
+              "",
+              "if(jsonData.id){",
+              "    postman.setEnvironmentVariable(\"taxId\", jsonData.id);",
+              "}",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-PAYPAL-SECURITY-CONTEXT",
+            "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",         \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }",
+            "disabled": true
+          },
+          {
+            "key": "do_not_write",
+            "value": "true",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"test_tax_version_000012345 {{$guid}}\", \n\t\"rate\": \"33.4\", \n\t\"segment\":\"INVOICE\", \n\t\"default\": \"false\"\n}"
+        },
+        "url": "https://{{domain}}:{{port}}/{{version}}/taxes/merchant-tax-rates/{{taxId}}"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "aaa2e950-c410-4852-b177-b066e161ba08",
+      "name": "GETALL",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-PAYPAL-SECURITY-CONTEXT",
+            "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",         \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }",
+            "disabled": true
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          }
+        ],
+        "body": {},
+        "url": {
+          "raw": "https://{{domain}}:{{port}}/{{version}}/taxes/merchant-tax-rates?segment=INVOICE",
+          "protocol": "https",
+          "host": [
+            "{{domain}}"
+          ],
+          "port": "{{port}}",
+          "path": [
+            "{{version}}",
+            "taxes",
+            "merchant-tax-rates"
+          ],
+          "query": [
+            {
+              "key": "segment",
+              "value": "INVOICE",
+              "equals": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "4b49f4d9-07be-44a0-0ae3-a994190ed3a9",
+      "name": "DELETE",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-PAYPAL-SECURITY-CONTEXT",
+            "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",         \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": "https://{{domain}}:{{port}}/{{version}}/taxes/merchant-tax-rates/{{taxId}}"
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "info": {
+    "_postman_id": "7330406a-bd76-ad16-ef5b-5b6a78bebbd3",
+    "name": "Catalog",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "4f0d1c7f-4fcb-4386-b994-1d76f43c14ff",
+      "name": "catalog",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "9b50e504-63f4-d4c4-50b9-c56bf390aab1",
+          "name": "POST",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(jsonData.id){",
+                  "    postman.setEnvironmentVariable(\"catalogId\", jsonData.id);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"{{accountNumber}}\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"{{accountNumber}}\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Christopher {{$guid}}\",\n  \"description\": \"Test Christopher for invoice\",\n  \"segment\": \"INVOICE\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "618eb821-6cc4-70b3-d2c7-51f36c293975",
+          "name": "GET",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{ \"version\": \"1.2\", \"actor\": { \"client_id\": \"ATGJPQYASuj8EnubIBzQSbGbCd0P606lWBGV-gNRGcjBDmC0bCWGQihTnvuU82ayhRUZn_mEhu7CYx8i\", \"id\": \"245285\", \"auth_claims\": [ \"CLIENT_ID\" ], \"auth_state\": \"IDENTIFIED\", \"account_number\": \"{{accountNumber}}\", \"encrypted_account_number\": \"SZEKQNBKSSQ8L\", \"party_id\": \"{{accountNumber}}\", \"user_type\": \"API_CALLER\" }, \"auth_token\": \"A0054t5wOn3v0ezs72qb9HZK8iwdho7i50QUZfuxgRjiupo\", \"auth_token_type\": \"ACCESS_TOKEN\", \"global_session_id\": \"I06a79282-73f6-44de-ab72-91a9cc83bfbb\", \"last_validated\": 1453833005, \"scopes\": [ \"https://uri.paypal.com/services/merchant/catalog\" ], \"client_id\": \"ATGJPQYASuj8EnubIBzQSbGbCd0P606lWBGV-gNRGcjBDmC0bCWGQihTnvuU82ayhRUZn_mEhu7CYx8i\", \"app_id\": \"APP-7E229193EY711191J\", \"claims\": { \"actor_payer_id\": \"SZEKQNBKSSQ8L\", \"subject_payer_id\": \"JUTCB3EK4CJY2\" }, \"subjects\": [ { \"subject\": { \"public_credential\": \"tlj-us-b12@paypal.com\", \"id\": \"263773\", \"auth_claims\": [ \"USERNAME\", \"PASSWORD\" ], \"auth_state\": \"LOGGEDIN\", \"account_number\": \"{{accountNumber}}\", \"encrypted_account_number\": \"JUTCB3EK4CJY2\", \"party_id\": \"{{accountNumber}}\", \"user_type\": \"CONSUMER\" }, \"features\": [] } ] }",
+                "description": "2260518959189500388"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "51d30222-51b0-fb81-4f95-f43785182001",
+          "name": "GET_COMPLETE",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{             \"actor\": {                 \"auth_claims\": [\"CLIENT_ID_SECRET\"],                 \"account_number\": \"{{accountNumber}}\",                 \"encrypted_account_number\": \"AVTJFDGF473X6\",                 \"party_id\": \"{{accountNumber}}\",                 \"user_type\": \"API_CALLER\"             },             \"auth_token\": \"A0153w2j36O7FQlmE1EFRJ4QXhnAoNQNhLt8N.IKjKYA1AM\",             \"auth_token_type\": \"ACCESS_TOKEN\",             \"global_session_id\": \"TFXC74U.jPQZ2RLLcjcQYaz1PITBbZ\",             \"last_validated\": 1.405635619E9,             \"scopes\": [\"*\"],             \"client_id\": \"mis\",             \"claims\": {                 \"actor_payer_id\": \"AVTJFDGF473X6\",                 \"subject_payer_id\": \"4JHVJ2YJJDLUE\"             },             \"subjects\": [                 {                     \"subject\": {                         \"id\": \"209052\",                         \"auth_claims\": [\"USERNAME\", \"PASSWORD\"],                         \"auth_state\": \"PARTIALLY_AUTHENTICATED\",                         \"account_number\": \"{{accountNumber}}\",                         \"encrypted_account_number\": \"4JHVJ2YJJDLUE\",                         \"party_id\": \"{{accountNumber}}\",                         \"user_type\": \"CONSUMER\",                         \"authflow_session_id\": \"TA19EE6iwAQl6hs6dAtySb5FPITBYO\"                     },                     \"features\": []                 }             ]         }"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}?details=complete",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "{{version}}",
+                "catalogs",
+                "catalogs",
+                "{{catalogId}}"
+              ],
+              "query": [
+                {
+                  "key": "details",
+                  "value": "complete",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5da28668-4fe8-206f-a7c1-d3393de8f6bf",
+          "name": "GETALL",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"{{accountNumber}}\",     \"encrypted_account_number\": \"{{accountNumber}}\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs?segment=INVOICE",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "{{version}}",
+                "catalogs",
+                "catalogs"
+              ],
+              "query": [
+                {
+                  "key": "segment",
+                  "value": "INVOICE",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "20eaa182-534e-a035-a5d8-afc233261bc1",
+          "name": "PUT",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{             \"actor\": {                 \"auth_claims\": [\"CLIENT_ID_SECRET\"],                 \"account_number\": \"{{accountNumber}}\",                 \"encrypted_account_number\": \"AVTJFDGF473X6\",                 \"party_id\": \"{{accountNumber}}\",                 \"user_type\": \"API_CALLER\"             },             \"auth_token\": \"A0153w2j36O7FQlmE1EFRJ4QXhnAoNQNhLt8N.IKjKYA1AM\",             \"auth_token_type\": \"ACCESS_TOKEN\",             \"global_session_id\": \"TFXC74U.jPQZ2RLLcjcQYaz1PITBbZ\",             \"last_validated\": 1.405635619E9,             \"scopes\": [\"*\"],             \"client_id\": \"mis\",             \"claims\": {                 \"actor_payer_id\": \"AVTJFDGF473X6\",                 \"subject_payer_id\": \"4JHVJ2YJJDLUE\"             },             \"subjects\": [                 {                     \"subject\": {                         \"id\": \"209052\",                         \"auth_claims\": [\"USERNAME\", \"PASSWORD\"],                         \"auth_state\": \"PARTIALLY_AUTHENTICATED\",                         \"account_number\": \"{{accountNumber}}\",                         \"encrypted_account_number\": \"4JHVJ2YJJDLUE\",                         \"party_id\": \"{{accountNumber}}\",                         \"user_type\": \"CONSUMER\",                         \"authflow_session_id\": \"TA19EE6iwAQl6hs6dAtySb5FPITBYO\"                     },                     \"features\": []                 }             ]         }"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Catalog {{$guid}}\",\n  \"description\": \"Catalog for invoice11\",\n  \"segment\": \"invoice\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a095ea3f-353c-5488-871e-da7c76f2adde",
+          "name": "ASSOCIATE-ITEMS",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{             \"actor\": {                 \"auth_claims\": [\"CLIENT_ID_SECRET\"],                 \"account_number\": \"{{accountNumber}}\",                 \"encrypted_account_number\": \"AVTJFDGF473X6\",                 \"party_id\": \"{{accountNumber}}\",                 \"user_type\": \"API_CALLER\"             },             \"auth_token\": \"A0153w2j36O7FQlmE1EFRJ4QXhnAoNQNhLt8N.IKjKYA1AM\",             \"auth_token_type\": \"ACCESS_TOKEN\",             \"global_session_id\": \"TFXC74U.jPQZ2RLLcjcQYaz1PITBbZ\",             \"last_validated\": 1.405635619E9,             \"scopes\": [\"*\"],             \"client_id\": \"mis\",             \"claims\": {                 \"actor_payer_id\": \"AVTJFDGF473X6\",                 \"subject_payer_id\": \"4JHVJ2YJJDLUE\"             },             \"subjects\": [                 {                     \"subject\": {                         \"id\": \"209052\",                         \"auth_claims\": [\"USERNAME\", \"PASSWORD\"],                         \"auth_state\": \"PARTIALLY_AUTHENTICATED\",                         \"account_number\": \"{{accountNumber}}\",                         \"encrypted_account_number\": \"4JHVJ2YJJDLUE\",                         \"party_id\": \"{{accountNumber}}\",                         \"user_type\": \"CONSUMER\",                         \"authflow_session_id\": \"TA19EE6iwAQl6hs6dAtySb5FPITBYO\"                     },                     \"features\": []                 }             ]         }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"object_id\": \"557e0f5ac9baeede09e13448\",\n  \"object_type\": \"TAX\",\n  \"items\": [\"558093c4f3a6a20f06b5579f\", \"558093caf3a6a20f06b557a0\"]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/55808f75d88762da318b7223/associate-items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "6a244c04-ad74-69cd-bf50-1ca596f053f4",
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{             \"actor\": {                 \"auth_claims\": [\"CLIENT_ID_SECRET\"],                 \"account_number\": \"{{accountNumber}}\",                 \"encrypted_account_number\": \"AVTJFDGF473X6\",                 \"party_id\": \"{{accountNumber}}\",                 \"user_type\": \"API_CALLER\"             },             \"auth_token\": \"A0153w2j36O7FQlmE1EFRJ4QXhnAoNQNhLt8N.IKjKYA1AM\",             \"auth_token_type\": \"ACCESS_TOKEN\",             \"global_session_id\": \"TFXC74U.jPQZ2RLLcjcQYaz1PITBbZ\",             \"last_validated\": 1.405635619E9,             \"scopes\": [\"*\"],             \"client_id\": \"mis\",             \"claims\": {                 \"actor_payer_id\": \"AVTJFDGF473X6\",                 \"subject_payer_id\": \"4JHVJ2YJJDLUE\"             },             \"subjects\": [                 {                     \"subject\": {                         \"id\": \"209052\",                         \"auth_claims\": [\"USERNAME\", \"PASSWORD\"],                         \"auth_state\": \"PARTIALLY_AUTHENTICATED\",                         \"account_number\": \"{{accountNumber}}\",                         \"encrypted_account_number\": \"4JHVJ2YJJDLUE\",                         \"party_id\": \"{{accountNumber}}\",                         \"user_type\": \"CONSUMER\",                         \"authflow_session_id\": \"TA19EE6iwAQl6hs6dAtySb5FPITBYO\"                     },                     \"features\": []                 }             ]         }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "abe8ab26-9780-47d5-80b0-4e9f7177c898",
+      "name": "items",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "49e396d6-b305-4302-9466-3fc84beb3e7c",
+          "name": "UPDATE",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"{{accountNumber}}\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"{{accountNumber}}\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              },
+              {
+                "key": "do_not_write",
+                "value": "true"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"name\" : \"test_item33 {{$guid}}\",\n  \"description\" : \"test_item33\",\n  \"variations\" : [\n    {\n      \"name\": \"test_item33\",\n      \"price\" : {\"currency\":\"ABC\",\"value\":\"222\"}\n    }\n  ]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}/items/{{itemId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "f29aa42f-7453-4fa2-8023-1376baa23f1e",
+          "name": "POST",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "if(jsonData.id){",
+                  "    postman.setEnvironmentVariable(\"itemId\", jsonData.id);",
+                  "}",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"{{accountNumber}}\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"{{accountNumber}}\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              },
+              {
+                "key": "do_not_write",
+                "value": "true"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{accessToken}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\" : \"test_item_chris {{$guid}}\",\n  \"description\" : \"test_item2_chris\",\n  \"variations\" : [\n    {\n      \"name\": \"test_item_chris\",\n      \"price\" : {\"currency\":\"USD\",\"value\":\"44444\"}\n    }\n  ]\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}/items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1c28c9b9-7689-412b-b038-e31029b7c402",
+          "name": "GET",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"{{accountNumber}}\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"{{accountNumber}}\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}/items/{{itemId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "d11d7e0c-f67e-443d-a379-3c2ade9f61d4",
+          "name": "GETALL",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"{{accountNumber}}\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"{{accountNumber}}\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}/items"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "bdd03c0b-e658-45bc-854d-1a2f8242d6c4",
+          "name": "DELETE",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{   \"actor\": {     \"auth_claims\": [       \"CLIENT_ID_SECRET\"     ],     \"account_number\": \"2260518959189500388\",     \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",     \"party_id\": \"2260518959189500388\",     \"user_type\": \"API_CALLER\"   },   \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",   \"auth_token_type\": \"ACCESS_TOKEN\",   \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",   \"last_validated\": 1438291818,   \"scopes\": [     \"https://uri.paypal.com/services/merchant/tax\",     \"https://uri.paypal.com/services/merchant/catalog\",     \"openid\"   ],   \"client_id\": \"tyh653\",   \"claims\": {     \"actor_payer_id\": \"WQ67LF2UCTPKQ\"   },   \"subjects\": [] }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{domain}}:{{port}}/{{version}}/catalogs/catalogs/{{catalogId}}/items/{{itemId}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "d96a9333-7fa0-4edb-8b4c-971f7c68e5db",
+      "name": "wps",
+      "description": "",
+      "item": [
+        {
+          "_postman_id": "e6e59a08-41a7-4523-8e78-bb05849b2429",
+          "name": "get inventory",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{     \"actor\": {         \"auth_claims\": [             \"CLIENT_ID_SECRET\"         ],         \"account_number\": \"2004946285986221235\",         \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",         \"party_id\": \"2004946285986221235\",         \"user_type\": \"API_CALLER\"     },     \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",     \"auth_token_type\": \"ACCESS_TOKEN\",     \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",     \"last_validated\": 1438291818,     \"scopes\": [         \"https://uri.paypal.com/services/merchant/tax\",         \"https://uri.paypal.com/services/merchant/catalog\",         \"openid\"     ],     \"client_id\": \"tyh653\",     \"claims\": {         \"actor_payer_id\": \"WQ67LF2UCTPKQ\"     },     \"subjects\": [         {             \"subject\": {                 \"account_number\": \"1741668796539623641\",                 \"encrypted_account_number\": \"NMXBYHSEL4FEY\",                 \"party_id\": \"1930102443385684548\",                 \"auth_claims\": [                     \"USERNAME\",                     \"PASSWORD\"                 ],                 \"auth_state\": \"LOGGEDIN\",                 \"user_type\": \"MERCHANT\"             }         }     ] }"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/v1/catalogs/catalogs/{{wpsCatalogId}}/items?item_id={{wpsItemId}}&variation_name={{wpsVariationName}}",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "v1",
+                "catalogs",
+                "catalogs",
+                "{{wpsCatalogId}}",
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "item_id",
+                  "value": "{{wpsItemId}}",
+                  "equals": true
+                },
+                {
+                  "key": "variation_name",
+                  "value": "{{wpsVariationName}}",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "77e4ca36-858c-447a-9956-7d5c043c1d7a",
+          "name": "update inventory",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-PAYPAL-SECURITY-CONTEXT",
+                "value": "{     \"actor\": {         \"auth_claims\": [             \"CLIENT_ID_SECRET\"         ],         \"account_number\": \"2004946285986221235\",         \"encrypted_account_number\": \"WQ67LF2UCTPKQ\",         \"party_id\": \"2004946285986221235\",         \"user_type\": \"API_CALLER\"     },     \"auth_token\": \"A015kKTqP0dhke1grn8k7eNr5u4-lACIDLXN7dmH4H1-iEw\",     \"auth_token_type\": \"ACCESS_TOKEN\",     \"global_session_id\": \"TAZ5Bbuxe5RDiOd6LLEGQbv1W6e7l3\",     \"last_validated\": 1438291818,     \"scopes\": [         \"https://uri.paypal.com/services/merchant/tax\",         \"https://uri.paypal.com/services/merchant/catalog\",         \"openid\"     ],     \"client_id\": \"tyh653\",     \"claims\": {         \"actor_payer_id\": \"WQ67LF2UCTPKQ\"     },     \"subjects\": [         {             \"subject\": {                 \"account_number\": \"1741668796539623641\",                 \"encrypted_account_number\": \"NMXBYHSEL4FEY\",                 \"party_id\": \"1930102443385684548\",                 \"auth_claims\": [                     \"USERNAME\",                     \"PASSWORD\"                 ],                 \"auth_state\": \"LOGGEDIN\",                 \"user_type\": \"MERCHANT\"             }         }     ] }"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\n    {\n        \"op\": \"add\",\n        \"path\": \"items/variations/@item_id == 'XPWFDMVENZMPS' && variation_name == 'S002' && type == 'PHYSICAL'/purchase_quantity\",\n        \"value\": {\n            \"purchaseQuantity\": 1\n        }\n    }\n]"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/catalogs/catalogs/{{wpsCatalogId}}"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

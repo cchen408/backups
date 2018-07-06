@@ -56,33 +56,6 @@
           "response": []
         }
       ]
-    },
-    {
-      "_postman_id": "7c325695-3b7b-4bee-afda-b54d43776954",
-      "name": "downstream",
-      "description": "",
-      "item": [
-        {
-          "_postman_id": "f4b412d4-c0ab-45ab-b0d3-810386dabf56",
-          "name": "bridge api",
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "",
-                "value": ""
-              }
-            ],
-            "body": {},
-            "url": "https://bridge.paypalcorp.com/searchsvc/profile/orghierarchy/knguyen1"
-          },
-          "response": []
-        }
-      ]
     }
   ],
   "event": [

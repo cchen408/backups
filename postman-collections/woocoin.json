@@ -12,17 +12,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "7e7f02bc-e746-42b4-abff-dc9594539049",
-          "name": "getBalance",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "url": "http://{{domain}}:{{port}}/balance/{{address}}"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "996554d9-de7e-4287-8477-696c97c7655e",
           "name": "addBalance",
           "request": {

@@ -12,25 +12,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "996554d9-de7e-4287-8477-696c97c7655e",
-          "name": "addBalance",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{}"
-            },
-            "url": "http://{{domain}}:{{port}}/balance/{{address}}"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "557f95ef-d1da-4b9e-a64a-ae26f7a90de3",
           "name": "getBalance of contract address",
           "request": {

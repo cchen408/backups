@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "20cf1013-906b-4edc-b8f2-3555535815be",
-    "name": "WooCoin",
+    "name": "WooCoin Legacy",
     "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
@@ -159,6 +159,28 @@
           "response": []
         }
       ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "cb3e0eb8-f27c-4d21-9802-25de75e9246a",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "f032e09d-e88d-4bb6-918f-49fde417d04e",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
     }
   ]
 }

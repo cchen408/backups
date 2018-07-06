@@ -12,17 +12,6 @@
       "description": "",
       "item": [
         {
-          "_postman_id": "557f95ef-d1da-4b9e-a64a-ae26f7a90de3",
-          "name": "getBalance of contract address",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "body": {},
-            "url": "http://{{domain}}:{{port}}/balance/0x627306090abaB3A6e1400e9345bC60c78a8BEf57"
-          },
-          "response": []
-        },
-        {
           "_postman_id": "5d64ca93-b73e-41a4-b226-966543f983a3",
           "name": "createWallet",
           "event": [

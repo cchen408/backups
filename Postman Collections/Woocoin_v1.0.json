@@ -1,0 +1,2683 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Woocoin v1.0",
+    "description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?"
+  },
+  "host": "DefaultParameterValue:DefaultParameterValue",
+  "basePath": "/v1/woocoin",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/users": {
+      "put": {
+        "description": "Crete user for woocoin user.",
+        "summary": "create user ADMIN",
+        "tags": [
+          "users"
+        ],
+        "operationId": "UsersPut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateUserAdminrequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Create201"
+            },
+            "examples": {
+              "application/json": {
+                "id": "employeeId",
+                "name": "Christopher Chen",
+                "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+                "qid": "Q20044574",
+                "workEmail": "chrichen@paypal.com",
+                "userId": "chrichen",
+                "dateCreated": "1995-09-07T10:40:52Z",
+                "dateUpdated": "1995-09-07T10:40:52Z"
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/users",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}395c8907-a6d5-4148-91ee-75d3ed61d460"
+              },
+              "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {},
+              "body": "{\"id\":\"employeeId\",\"name\":\"Christopher Chen\",\"imageUrl\":\"https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548\",\"qid\":\"Q20044574\",\"workEmail\":\"chrichen@paypal.com\",\"userId\":\"chrichen\",\"dateCreated\":\"1995-09-07T10:40:52Z\",\"dateUpdated\":\"1995-09-07T10:40:52Z\"}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "create user ADMIN",
+            "x-testDescription": "Crete user for woocoin user."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/users/chrichen": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get wallet",
+        "tags": [
+          "wallets"
+        ],
+        "operationId": "UsersChrichenGet2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/users/chrichen",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "get wallet",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "Crete user for woocoin user.",
+        "summary": "create (upsert) wallet",
+        "tags": [
+          "wallets"
+        ],
+        "operationId": "UsersChrichenPut2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/200"
+            },
+            "examples": {
+              "application/json": {
+                "_id": "employeeId",
+                "name": "Christopher Chen",
+                "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+                "qid": "Q20044574",
+                "workEmail": "chrichen@paypal.com",
+                "userId": "chrichen"
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/users/chrichen",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Headers": "Content-Type, Authorization, Account-Number",
+                "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
+                "Access-Control-Allow-Origin": "*",
+                "Connection": "keep-alive",
+                "Content-Length": "211",
+                "Content-Type": "application/json; charset=utf-8",
+                "Date": "Fri, 06 Jul 2018 17:42:10 GMT",
+                "ETag": "W/\"d3-KF36NKndDnPhGoh6gRCpvicHkGA\""
+              },
+              "body": "{\"_id\":\"employeeId\",\"name\":\"Christopher Chen\",\"imageUrl\":\"https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548\",\"qid\":\"Q20044574\",\"workEmail\":\"chrichen@paypal.com\",\"userId\":\"chrichen\"}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "create (upsert) wallet",
+            "x-testDescription": "Crete user for woocoin user."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/users/chrichen/activate": {
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "activate user",
+        "tags": [
+          "users"
+        ],
+        "operationId": "UsersChrichenActivatePut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/users/chrichen/activate",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "activate user",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/$model$": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get",
+        "tags": [
+          "$model$"
+        ],
+        "operationId": "ModelGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/$model$",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "get",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "Crete user for woocoin user.",
+        "summary": "put",
+        "tags": [
+          "$model$"
+        ],
+        "operationId": "ModelPut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/200"
+            },
+            "examples": {
+              "application/json": {
+                "_id": "employeeId",
+                "name": "Christopher Chen",
+                "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+                "qid": "Q20044574",
+                "workEmail": "chrichen@paypal.com",
+                "userId": "chrichen"
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/$model$",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Headers": "Content-Type, Authorization, Account-Number",
+                "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
+                "Access-Control-Allow-Origin": "*",
+                "Connection": "keep-alive",
+                "Content-Length": "211",
+                "Content-Type": "application/json; charset=utf-8",
+                "Date": "Fri, 06 Jul 2018 17:42:10 GMT",
+                "ETag": "W/\"d3-KF36NKndDnPhGoh6gRCpvicHkGA\""
+              },
+              "body": "{\"_id\":\"employeeId\",\"name\":\"Christopher Chen\",\"imageUrl\":\"https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548\",\"qid\":\"Q20044574\",\"workEmail\":\"chrichen@paypal.com\",\"userId\":\"chrichen\"}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "put",
+            "x-testDescription": "Crete user for woocoin user."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "post": {
+        "description": "Crete user for woocoin user.",
+        "summary": "post test",
+        "tags": [
+          "$model$"
+        ],
+        "operationId": "ModelPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PostTestrequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/200"
+            },
+            "examples": {
+              "application/json": {
+                "_id": "employeeId",
+                "name": "Christopher Chen",
+                "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+                "qid": "Q20044574",
+                "workEmail": "chrichen@paypal.com",
+                "userId": "chrichen"
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/$model$",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}ea4467e5-a9ab-4ab7-b5db-5e3a3bbc0101"
+              },
+              "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Headers": "Content-Type, Authorization, Account-Number",
+                "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
+                "Access-Control-Allow-Origin": "*",
+                "Connection": "keep-alive",
+                "Content-Length": "211",
+                "Content-Type": "application/json; charset=utf-8",
+                "Date": "Fri, 06 Jul 2018 17:42:10 GMT",
+                "ETag": "W/\"d3-KF36NKndDnPhGoh6gRCpvicHkGA\""
+              },
+              "body": "{\"_id\":\"employeeId\",\"name\":\"Christopher Chen\",\"imageUrl\":\"https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548\",\"qid\":\"Q20044574\",\"workEmail\":\"chrichen@paypal.com\",\"userId\":\"chrichen\"}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "post test",
+            "x-testDescription": "Crete user for woocoin user."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "delete": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "$model$"
+        ],
+        "operationId": "ModelDelete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "DELETE",
+              "uri": "/$model$",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "delete",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/wallets": {
+      "post": {
+        "description": "Crete user for woocoin user.",
+        "summary": "create wallet record ADMIN",
+        "tags": [
+          "wallets"
+        ],
+        "operationId": "WalletsPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateWalletRecordAdminrequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Create201"
+            },
+            "examples": {
+              "application/json": {
+                "id": "employeeId",
+                "name": "Christopher Chen",
+                "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+                "qid": "Q20044574",
+                "workEmail": "chrichen@paypal.com",
+                "userId": "chrichen",
+                "dateCreated": "1995-09-07T10:40:52Z",
+                "dateUpdated": "1995-09-07T10:40:52Z"
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/wallets",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}0e47f6fd-da9f-401f-bde0-75779fd9448d"
+              },
+              "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {},
+              "body": "{\"id\":\"employeeId\",\"name\":\"Christopher Chen\",\"imageUrl\":\"https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548\",\"qid\":\"Q20044574\",\"workEmail\":\"chrichen@paypal.com\",\"userId\":\"chrichen\",\"dateCreated\":\"1995-09-07T10:40:52Z\",\"dateUpdated\":\"1995-09-07T10:40:52Z\"}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "create wallet record ADMIN",
+            "x-testDescription": "Crete user for woocoin user."
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rankings": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Rankings_GET",
+        "tags": [
+          "rankings"
+        ],
+        "operationId": "RankingsGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rankings?limit=20&offset=0",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Rankings_GET1",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/newsfeeds": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get all newsfeed",
+        "tags": [
+          "newsfeeds"
+        ],
+        "operationId": "NewsfeedsGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/newsfeeds?limit=20&offset=0",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "get all newsfeed",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "create newsfeed",
+        "tags": [
+          "newsfeeds"
+        ],
+        "operationId": "NewsfeedsPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateNewsfeedrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/newsfeeds",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              },
+              "body": "{\"from\":\"chrichen\",\"to\":[\"vnmaniyar\"],\"amount\":100,\"type\":\"p2p\",\"description\":\"thanks for helping me carry stuff to the car\",\"transactionHash\":\"6efc3dea-b990-4937-9952-e0167daa72e7\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "create newsfeed",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/newsfeeds/{newsfeedId}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "NewsfeedsByNewsfeedId_GET",
+        "tags": [
+          "newsfeeds"
+        ],
+        "operationId": "NewsfeedsByNewsfeedIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "newsfeedId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/newsfeeds/%7B%7BnewsfeedId%7D%7D",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "NewsfeedsByNewsfeedId_GET1",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/newsfeeds/4432423": {
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "update newsfeed",
+        "tags": [
+          "newsfeeds"
+        ],
+        "operationId": "Newsfeeds4432423Put",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateNewsfeedrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/newsfeeds/4432423",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              },
+              "body": "{\"description\":\"test newsfeed\",\"initiator\":\"corp-news-id\",\"recipient\":\"test-recipient\",\"users\":[\"test-user1\",\"test-user2\"],\"type\":\"idea\",\"amount\":1000,\"transactionHash\":\"test-blockchain-hash\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "update newsfeed",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/newsfeeds/{newsfeedId}/like": {
+      "put": {
+        "description": "Like or unlike a newsfeed event",
+        "summary": "NewsfeedsLikeByNewsfeedId_PUT",
+        "tags": [
+          "newsfeeds"
+        ],
+        "operationId": "NewsfeedsLikeByNewsfeedIdPut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "newsfeedId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "PUT",
+              "uri": "/newsfeeds/%7B%7BnewsfeedId%7D%7D/like",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "NewsfeedsLikeByNewsfeedId_PUT1",
+            "x-testDescription": "Like or unlike a newsfeed event"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/transfers": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "Transfers_GET",
+        "tags": [
+          "transfers"
+        ],
+        "operationId": "TransfersGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/transfers?limit=20&offset=0",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "Transfers_GET1",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "create transfer",
+        "tags": [
+          "transfers"
+        ],
+        "operationId": "TransfersPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateTransferrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/transfers",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              },
+              "body": "{\"from\":\"god\",\"to\":[\"chrichen\",\"taosun\"],\"type\":\"p2p\",\"amount\":\"100\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "create transfer",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/transfers/{transferId}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "TransfersByTransferId_GET",
+        "tags": [
+          "transfers"
+        ],
+        "operationId": "TransfersByTransferIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "transferId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/transfers/%7B%7BtransferId%7D%7D",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "{{x-paypal-user-id}}"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "TransfersByTransferId_GET1",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rewards": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get all rewards",
+        "tags": [
+          "rewards"
+        ],
+        "operationId": "RewardsGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/rewards?limit=20&offset=0&filter={}&orderBy={\"name\":1}",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "testPB"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "get all rewards",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "create reward",
+        "tags": [
+          "rewards"
+        ],
+        "operationId": "RewardsPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/CreateRewardrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/rewards",
+              "headers": {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "x-paypal-user-id": "testPB"
+              },
+              "body": "{\"name\":\"Test -- fe77aa86-7e5f-4f2b-8d2d-9207e0dc8389\",\"description\":\"Test-0f6d5916-0fa1-4fa5-9741-8b60382cf97f Experience\",\"price\":\"21\",\"quantity\":25,\"isActive\":true,\"imageUrl\":\"/path/to/image\",\"locations\":[\"San Jose\",\"Banglore\"],\"categories\":[\"Food\",\"Xyz\"],\"logisticsInfo\":\"something something\"}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "create reward",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/rewards/{rewardId}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get reward",
+        "tags": [
+          "rewards"
+        ],
+        "operationId": "RewardsByRewardIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "rewardId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "update reward",
+        "tags": [
+          "rewards"
+        ],
+        "operationId": "RewardsByRewardIdPut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRewardrequest"
+            }
+          },
+          {
+            "name": "rewardId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/knguyen1": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "bridge api Copy",
+        "tags": [
+          "downstream"
+        ],
+        "operationId": "Knguyen1Get2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/knguyen1",
+              "headers": {
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "bridge api Copy",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/redemptions": {
+      "get": {
+        "description": "redeem reward",
+        "summary": "get all redemptions",
+        "tags": [
+          "redemptions"
+        ],
+        "operationId": "RedemptionsGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int32",
+            "description": ""
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "GET",
+              "uri": "/redemptions?limit=20&offset=0&filter={}&orderBy={\"name\":1}",
+              "headers": {
+                "x-paypal-user-id": "testPB",
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              }
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "get all redemptions",
+            "x-testDescription": "redeem reward"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "post": {
+        "description": "redeem reward",
+        "summary": "redeeem reward",
+        "tags": [
+          "redemptions"
+        ],
+        "operationId": "RedemptionsPost",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/RedeeemRewardrequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/redemptions",
+              "headers": {
+                "x-paypal-user-id": "testPB",
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+              },
+              "body": "{\"rewardId\":\"{{rewardId}}\",\"quantity\":2}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "redeeem reward",
+            "x-testDescription": "redeem reward"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/redemptions/{redemptionId}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get redemption",
+        "tags": [
+          "redemptions"
+        ],
+        "operationId": "RedemptionsByRedemptionIdGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "redemptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      },
+      "put": {
+        "description": "TODO: Add Description",
+        "summary": "update redemption",
+        "tags": [
+          "redemptions"
+        ],
+        "operationId": "RedemptionsByRedemptionIdPut",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRedemptionrequest"
+            }
+          },
+          {
+            "name": "redemptionId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateUserAdminrequest": {
+      "title": "create user ADMINRequest",
+      "example": {
+        "firstName": "Christopher",
+        "lastName": "Chen"
+      },
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "description": "",
+          "example": "Christopher",
+          "type": "string"
+        },
+        "lastName": {
+          "description": "",
+          "example": "Chen",
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName"
+      ]
+    },
+    "Create201": {
+      "title": "create 201",
+      "example": {
+        "id": "employeeId",
+        "name": "Christopher Chen",
+        "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+        "qid": "Q20044574",
+        "workEmail": "chrichen@paypal.com",
+        "userId": "chrichen",
+        "dateCreated": "1995-09-07T10:40:52Z",
+        "dateUpdated": "1995-09-07T10:40:52Z"
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "example": "employeeId",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "example": "Christopher Chen",
+          "type": "string"
+        },
+        "imageUrl": {
+          "description": "",
+          "example": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+          "type": "string"
+        },
+        "qid": {
+          "description": "",
+          "example": "Q20044574",
+          "type": "string"
+        },
+        "workEmail": {
+          "description": "",
+          "example": "chrichen@paypal.com",
+          "type": "string"
+        },
+        "userId": {
+          "description": "",
+          "example": "chrichen",
+          "type": "string"
+        },
+        "dateCreated": {
+          "description": "",
+          "example": "9/7/1995 10:40:52 AM",
+          "type": "string"
+        },
+        "dateUpdated": {
+          "description": "",
+          "example": "9/7/1995 10:40:52 AM",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "imageUrl",
+        "qid",
+        "workEmail",
+        "userId",
+        "dateCreated",
+        "dateUpdated"
+      ]
+    },
+    "200": {
+      "title": "200",
+      "example": {
+        "_id": "employeeId",
+        "name": "Christopher Chen",
+        "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+        "qid": "Q20044574",
+        "workEmail": "chrichen@paypal.com",
+        "userId": "chrichen"
+      },
+      "type": "object",
+      "properties": {
+        "_id": {
+          "description": "",
+          "example": "employeeId",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "example": "Christopher Chen",
+          "type": "string"
+        },
+        "imageUrl": {
+          "description": "",
+          "example": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
+          "type": "string"
+        },
+        "qid": {
+          "description": "",
+          "example": "Q20044574",
+          "type": "string"
+        },
+        "workEmail": {
+          "description": "",
+          "example": "chrichen@paypal.com",
+          "type": "string"
+        },
+        "userId": {
+          "description": "",
+          "example": "chrichen",
+          "type": "string"
+        }
+      },
+      "required": [
+        "_id",
+        "name",
+        "imageUrl",
+        "qid",
+        "workEmail",
+        "userId"
+      ]
+    },
+    "PostTestrequest": {
+      "title": "post testRequest",
+      "example": {
+        "firstName": "Christopher",
+        "lastName": "Chen"
+      },
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "description": "",
+          "example": "Christopher",
+          "type": "string"
+        },
+        "lastName": {
+          "description": "",
+          "example": "Chen",
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName"
+      ]
+    },
+    "CreateWalletRecordAdminrequest": {
+      "title": "create wallet record ADMINRequest",
+      "example": {
+        "firstName": "Christopher",
+        "lastName": "Chen"
+      },
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "description": "",
+          "example": "Christopher",
+          "type": "string"
+        },
+        "lastName": {
+          "description": "",
+          "example": "Chen",
+          "type": "string"
+        }
+      },
+      "required": [
+        "firstName",
+        "lastName"
+      ]
+    },
+    "CreateNewsfeedrequest": {
+      "title": "create newsfeedRequest",
+      "example": {
+        "from": "chrichen",
+        "to": [
+          "vnmaniyar"
+        ],
+        "amount": 100,
+        "type": "p2p",
+        "description": "thanks for helping me carry stuff to the car",
+        "transactionHash": "6efc3dea-b990-4937-9952-e0167daa72e7"
+      },
+      "type": "object",
+      "properties": {
+        "from": {
+          "description": "",
+          "example": "chrichen",
+          "type": "string"
+        },
+        "to": {
+          "description": "",
+          "example": [
+            "vnmaniyar"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "amount": {
+          "description": "",
+          "example": 100,
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "description": "",
+          "example": "p2p",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "example": "thanks for helping me carry stuff to the car",
+          "type": "string"
+        },
+        "transactionHash": {
+          "description": "",
+          "example": "6efc3dea-b990-4937-9952-e0167daa72e7",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "amount",
+        "type",
+        "description",
+        "transactionHash"
+      ]
+    },
+    "UpdateNewsfeedrequest": {
+      "title": "update newsfeedRequest",
+      "example": {
+        "description": "test newsfeed",
+        "initiator": "corp-news-id",
+        "recipient": "test-recipient",
+        "users": [
+          "test-user1",
+          "test-user2"
+        ],
+        "type": "idea",
+        "amount": 1000,
+        "transactionHash": "test-blockchain-hash"
+      },
+      "type": "object",
+      "properties": {
+        "description": {
+          "description": "",
+          "example": "test newsfeed",
+          "type": "string"
+        },
+        "initiator": {
+          "description": "",
+          "example": "corp-news-id",
+          "type": "string"
+        },
+        "recipient": {
+          "description": "",
+          "example": "test-recipient",
+          "type": "string"
+        },
+        "users": {
+          "description": "",
+          "example": [
+            "test-user1",
+            "test-user2"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "type": {
+          "description": "",
+          "example": "idea",
+          "type": "string"
+        },
+        "amount": {
+          "description": "",
+          "example": 1000,
+          "type": "integer",
+          "format": "int32"
+        },
+        "transactionHash": {
+          "description": "",
+          "example": "test-blockchain-hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "initiator",
+        "recipient",
+        "users",
+        "type",
+        "amount",
+        "transactionHash"
+      ]
+    },
+    "CreateTransferrequest": {
+      "title": "create transferRequest",
+      "example": {
+        "from": "god",
+        "to": [
+          "chrichen",
+          "taosun"
+        ],
+        "type": "p2p",
+        "amount": "100"
+      },
+      "type": "object",
+      "properties": {
+        "from": {
+          "description": "",
+          "example": "god",
+          "type": "string"
+        },
+        "to": {
+          "description": "",
+          "example": [
+            "chrichen",
+            "taosun"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "type": {
+          "description": "",
+          "example": "p2p",
+          "type": "string"
+        },
+        "amount": {
+          "description": "",
+          "example": "100",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "type",
+        "amount"
+      ]
+    },
+    "CreateRewardrequest": {
+      "title": "create rewardRequest",
+      "example": {
+        "name": "Test -- fe77aa86-7e5f-4f2b-8d2d-9207e0dc8389",
+        "description": "Test-0f6d5916-0fa1-4fa5-9741-8b60382cf97f Experience",
+        "price": "21",
+        "quantity": 25,
+        "isActive": true,
+        "imageUrl": "/path/to/image",
+        "locations": [
+          "San Jose",
+          "Banglore"
+        ],
+        "categories": [
+          "Food",
+          "Xyz"
+        ],
+        "logisticsInfo": "something something"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "example": "Test -- fe77aa86-7e5f-4f2b-8d2d-9207e0dc8389",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "example": "Test-0f6d5916-0fa1-4fa5-9741-8b60382cf97f Experience",
+          "type": "string"
+        },
+        "price": {
+          "description": "",
+          "example": "21",
+          "type": "string"
+        },
+        "quantity": {
+          "description": "",
+          "example": 25,
+          "type": "integer",
+          "format": "int32"
+        },
+        "isActive": {
+          "description": "",
+          "example": true,
+          "type": "boolean"
+        },
+        "imageUrl": {
+          "description": "",
+          "example": "/path/to/image",
+          "type": "string"
+        },
+        "locations": {
+          "description": "",
+          "example": [
+            "San Jose",
+            "Banglore"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "categories": {
+          "description": "",
+          "example": [
+            "Food",
+            "Xyz"
+          ],
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "logisticsInfo": {
+          "description": "",
+          "example": "something something",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "price",
+        "quantity",
+        "isActive",
+        "imageUrl",
+        "locations",
+        "categories",
+        "logisticsInfo"
+      ]
+    },
+    "UpdateRewardrequest": {
+      "title": "update rewardRequest",
+      "example": {
+        "name": "Updated {{experienceName}}",
+        "description": "Test description",
+        "price": "22",
+        "quantity": 15
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "example": "Updated {{experienceName}}",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "example": "Test description",
+          "type": "string"
+        },
+        "price": {
+          "description": "",
+          "example": "22",
+          "type": "string"
+        },
+        "quantity": {
+          "description": "",
+          "example": 15,
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "price",
+        "quantity"
+      ]
+    },
+    "RedeeemRewardrequest": {
+      "title": "redeeem rewardRequest",
+      "example": {
+        "rewardId": "{{rewardId}}",
+        "quantity": 2
+      },
+      "type": "object",
+      "properties": {
+        "rewardId": {
+          "description": "",
+          "example": "{{rewardId}}",
+          "type": "string"
+        },
+        "quantity": {
+          "description": "",
+          "example": 2,
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "rewardId",
+        "quantity"
+      ]
+    },
+    "UpdateRedemptionrequest": {
+      "title": "update redemptionRequest",
+      "example": {
+        "status": "spent"
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "example": "spent",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status"
+      ]
+    }
+  }
+}

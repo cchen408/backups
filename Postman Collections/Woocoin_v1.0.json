@@ -89,7 +89,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}395c8907-a6d5-4148-91ee-75d3ed61d460"
+                "x-paypal-user-id": "{{x-paypal-user-id}}b01429ce-2ab6-4727-888a-d4c68189bcdf"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -575,7 +575,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}ea4467e5-a9ab-4ab7-b5db-5e3a3bbc0101"
+                "x-paypal-user-id": "{{x-paypal-user-id}}91f0bfe7-2f25-41b7-ad8c-5f2e6b841c4a"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -754,7 +754,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}0e47f6fd-da9f-401f-bde0-75779fd9448d"
+                "x-paypal-user-id": "{{x-paypal-user-id}}3f1533fb-2bda-4fe7-86d4-f1ea180390f0"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -1008,7 +1008,7 @@
                 "Accept": "application/json",
                 "Content-Type": "application/json"
               },
-              "body": "{\"from\":\"chrichen\",\"to\":[\"vnmaniyar\"],\"amount\":100,\"type\":\"p2p\",\"description\":\"thanks for helping me carry stuff to the car\",\"transactionHash\":\"6efc3dea-b990-4937-9952-e0167daa72e7\"}"
+              "body": "{\"from\":\"chrichen\",\"to\":[\"vnmaniyar\"],\"amount\":100,\"type\":\"p2p\",\"description\":\"thanks for helping me carry stuff to the car\",\"transactionHash\":\"46360d1d-d31a-4602-8ec3-41e65b00b16e\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1677,7 +1677,7 @@
                 "Content-Type": "application/json",
                 "x-paypal-user-id": "testPB"
               },
-              "body": "{\"name\":\"Test -- fe77aa86-7e5f-4f2b-8d2d-9207e0dc8389\",\"description\":\"Test-0f6d5916-0fa1-4fa5-9741-8b60382cf97f Experience\",\"price\":\"21\",\"quantity\":25,\"isActive\":true,\"imageUrl\":\"/path/to/image\",\"locations\":[\"San Jose\",\"Banglore\"],\"categories\":[\"Food\",\"Xyz\"],\"logisticsInfo\":\"something something\"}"
+              "body": "{\"name\":\"Test -- 975d4da1-6ddb-4ff0-96f4-ae08295d002a\",\"description\":\"Test-353abacd-5723-4792-80a9-a06032cc0731 Experience\",\"price\":\"21\",\"quantity\":25,\"isActive\":true,\"imageUrl\":\"/path/to/image\",\"locations\":[\"San Jose\",\"Banglore\"],\"categories\":[\"Food\",\"Xyz\"],\"logisticsInfo\":\"something something\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2340,7 +2340,7 @@
         "amount": 100,
         "type": "p2p",
         "description": "thanks for helping me carry stuff to the car",
-        "transactionHash": "6efc3dea-b990-4937-9952-e0167daa72e7"
+        "transactionHash": "46360d1d-d31a-4602-8ec3-41e65b00b16e"
       },
       "type": "object",
       "properties": {
@@ -2377,7 +2377,7 @@
         },
         "transactionHash": {
           "description": "",
-          "example": "6efc3dea-b990-4937-9952-e0167daa72e7",
+          "example": "46360d1d-d31a-4602-8ec3-41e65b00b16e",
           "type": "string"
         }
       },
@@ -2509,8 +2509,8 @@
     "CreateRewardrequest": {
       "title": "create rewardRequest",
       "example": {
-        "name": "Test -- fe77aa86-7e5f-4f2b-8d2d-9207e0dc8389",
-        "description": "Test-0f6d5916-0fa1-4fa5-9741-8b60382cf97f Experience",
+        "name": "Test -- 975d4da1-6ddb-4ff0-96f4-ae08295d002a",
+        "description": "Test-353abacd-5723-4792-80a9-a06032cc0731 Experience",
         "price": "21",
         "quantity": 25,
         "isActive": true,
@@ -2529,12 +2529,12 @@
       "properties": {
         "name": {
           "description": "",
-          "example": "Test -- fe77aa86-7e5f-4f2b-8d2d-9207e0dc8389",
+          "example": "Test -- 975d4da1-6ddb-4ff0-96f4-ae08295d002a",
           "type": "string"
         },
         "description": {
           "description": "",
-          "example": "Test-0f6d5916-0fa1-4fa5-9741-8b60382cf97f Experience",
+          "example": "Test-353abacd-5723-4792-80a9-a06032cc0731 Experience",
           "type": "string"
         },
         "price": {

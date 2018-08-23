@@ -89,7 +89,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}ffebae1d-df5c-4342-bb61-be59edd2ee8c"
+                "x-paypal-user-id": "{{x-paypal-user-id}}10be4a21-d383-4ea7-815c-4008a46c9f95"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -488,10 +488,10 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}99d872d5-9606-4960-a719-f6773b7576fb",
+                "x-paypal-user-id": "{{x-paypal-user-id}}173dc8ce-fab4-40a8-b4a0-21e95bb60e57",
                 "x-paypal-admin-id": "chrichen"
               },
-              "body": "{\"id\":\"testAirdrop61\",\"description\":\"test airdrop\",\"amount\":100,\"status\":\"active\"}"
+              "body": "{\"id\":\"testAirdrop590\",\"description\":\"test airdrop\",\"amount\":100,\"status\":\"active\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -595,7 +595,7 @@
         "tags": [
           "activities"
         ],
-        "operationId": "ActivitiesPost",
+        "operationId": "ActivitiesPost2",
         "produces": [
           "application/json"
         ],
@@ -670,7 +670,7 @@
                 "x-paypal-user-id": "chrichen",
                 "x-paypal-admin-id": "chrichen"
               },
-              "body": "{\"resourceId\":\"welcome\",\"resourceType\":\"Airdrop\"}"
+              "body": "{\"resourceId\":\"welcome\",\"resourceType\":\"Airdrop\",\"userId\":\"chrichen\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1032,7 +1032,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}0780800c-01c1-44d4-af9b-eea660c616b1"
+                "x-paypal-user-id": "{{x-paypal-user-id}}6f3b7e48-7ee5-497f-8efe-af76f6d81b49"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -1211,7 +1211,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}f53fe21d-33ab-44d2-8b74-bf988504c380"
+                "x-paypal-user-id": "{{x-paypal-user-id}}43a4a4fa-ae07-4683-a23e-4c4245c05400"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -1465,7 +1465,7 @@
                 "Accept": "application/json",
                 "Content-Type": "application/json"
               },
-              "body": "{\"from\":\"chrichen\",\"to\":[\"vnmaniyar\"],\"amount\":100,\"type\":\"p2p\",\"description\":\"thanks for helping me carry stuff to the car\",\"transactionHash\":\"fdd853fe-044a-4740-8a81-9b8b77bf07dc\"}"
+              "body": "{\"from\":\"chrichen\",\"to\":[\"vnmaniyar\"],\"amount\":100,\"type\":\"p2p\",\"description\":\"thanks for helping me carry stuff to the car\",\"transactionHash\":\"53ce6fdc-346a-4489-b13c-be2574f544cc\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2134,7 +2134,7 @@
                 "Content-Type": "application/json",
                 "x-paypal-user-id": "testPB"
               },
-              "body": "{\"name\":\"Test -- f28e57ea-9f9b-46cf-a568-3d2d589b6904\",\"description\":\"Test-80e42f87-b25a-4198-9d39-85c07eeacd15 Experience\",\"price\":\"21\",\"quantity\":25,\"imageUrl\":\"/path/to/image\",\"locations\":[\"San Jose\",\"Banglore\"],\"categories\":[\"Food\",\"Xyz\"],\"logisticsInfo\":\"something something\"}"
+              "body": "{\"name\":\"Test -- 403bed94-9619-4501-89f7-b3c450fa09d9\",\"description\":\"Test-9a895811-bf45-4185-9a2c-8e1d42f8894f Experience\",\"price\":\"21\",\"quantity\":25,\"imageUrl\":\"/path/to/image\",\"locations\":[\"San Jose\",\"Banglore\"],\"categories\":[\"Food\",\"Xyz\"],\"logisticsInfo\":\"something something\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2742,7 +2742,7 @@
     "CreateAirdropAdminrequest": {
       "title": "create airdrop ADMINRequest",
       "example": {
-        "id": "testAirdrop61",
+        "id": "testAirdrop590",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2751,7 +2751,7 @@
       "properties": {
         "id": {
           "description": "",
-          "example": "testAirdrop61",
+          "example": "testAirdrop590",
           "type": "string"
         },
         "description": {
@@ -2778,11 +2778,51 @@
         "status"
       ]
     },
+    "CreateAirdropAdminrequest6": {
+      "title": "create airdrop ADMINRequest6",
+      "example": {
+        "name": "test - 66286d2a-afbb-4ac3-b60a-e9cf6d8e489c",
+        "description": "test airdrop",
+        "amount": 100,
+        "status": "complete"
+      },
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "example": "test - 66286d2a-afbb-4ac3-b60a-e9cf6d8e489c",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "example": "test airdrop",
+          "type": "string"
+        },
+        "amount": {
+          "description": "",
+          "example": 100,
+          "type": "integer",
+          "format": "int32"
+        },
+        "status": {
+          "description": "",
+          "example": "complete",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "description",
+        "amount",
+        "status"
+      ]
+    },
     "CreateActivityrequest": {
       "title": "create activityRequest",
       "example": {
         "resourceId": "welcome",
-        "resourceType": "Airdrop"
+        "resourceType": "Airdrop",
+        "userId": "chrichen"
       },
       "type": "object",
       "properties": {
@@ -2795,11 +2835,17 @@
           "description": "",
           "example": "Airdrop",
           "type": "string"
+        },
+        "userId": {
+          "description": "",
+          "example": "chrichen",
+          "type": "string"
         }
       },
       "required": [
         "resourceId",
-        "resourceType"
+        "resourceType",
+        "userId"
       ]
     },
     "PostTestrequest": {
@@ -2860,7 +2906,7 @@
         "amount": 100,
         "type": "p2p",
         "description": "thanks for helping me carry stuff to the car",
-        "transactionHash": "fdd853fe-044a-4740-8a81-9b8b77bf07dc"
+        "transactionHash": "53ce6fdc-346a-4489-b13c-be2574f544cc"
       },
       "type": "object",
       "properties": {
@@ -2897,7 +2943,7 @@
         },
         "transactionHash": {
           "description": "",
-          "example": "fdd853fe-044a-4740-8a81-9b8b77bf07dc",
+          "example": "53ce6fdc-346a-4489-b13c-be2574f544cc",
           "type": "string"
         }
       },
@@ -3029,8 +3075,8 @@
     "CreateRewardrequest": {
       "title": "create rewardRequest",
       "example": {
-        "name": "Test -- f28e57ea-9f9b-46cf-a568-3d2d589b6904",
-        "description": "Test-80e42f87-b25a-4198-9d39-85c07eeacd15 Experience",
+        "name": "Test -- 403bed94-9619-4501-89f7-b3c450fa09d9",
+        "description": "Test-9a895811-bf45-4185-9a2c-8e1d42f8894f Experience",
         "price": "21",
         "quantity": 25,
         "imageUrl": "/path/to/image",
@@ -3048,12 +3094,12 @@
       "properties": {
         "name": {
           "description": "",
-          "example": "Test -- f28e57ea-9f9b-46cf-a568-3d2d589b6904",
+          "example": "Test -- 403bed94-9619-4501-89f7-b3c450fa09d9",
           "type": "string"
         },
         "description": {
           "description": "",
-          "example": "Test-80e42f87-b25a-4198-9d39-85c07eeacd15 Experience",
+          "example": "Test-9a895811-bf45-4185-9a2c-8e1d42f8894f Experience",
           "type": "string"
         },
         "price": {

@@ -93,9 +93,9 @@
         "description": "Crete user for woocoin user.",
         "summary": "create user ADMIN",
         "tags": [
-          "webmethods"
+          "users"
         ],
-        "operationId": "UsersPut2",
+        "operationId": "UsersPut",
         "produces": [
           "application/json"
         ],
@@ -132,19 +132,21 @@
           }
         ],
         "responses": {
-          "200": {
+          "201": {
             "description": "",
             "schema": {
-              "$ref": "#/definitions/200"
+              "$ref": "#/definitions/Create201"
             },
             "examples": {
               "application/json": {
-                "_id": "employeeId",
+                "id": "employeeId",
                 "name": "Christopher Chen",
                 "imageUrl": "https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548",
                 "qid": "Q20044574",
                 "workEmail": "chrichen@paypal.com",
-                "userId": "chrichen"
+                "userId": "chrichen",
+                "dateCreated": "1995-09-07T10:40:52Z",
+                "dateUpdated": "1995-09-07T10:40:52Z"
               }
             }
           }
@@ -158,7 +160,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}a5e0f9b5-096d-42f3-9495-d3095b911d14"
+                "x-paypal-user-id": "{{x-paypal-user-id}}54eec5c5-b4df-4a9c-9d1a-84cdc53a0e4f"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -168,17 +170,8 @@
               "x-arrayOrderedMatching": false,
               "x-arrayCheckCount": false,
               "x-matchResponseSchema": true,
-              "headers": {
-                "Access-Control-Allow-Headers": "Content-Type, Authorization, Account-Number",
-                "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE",
-                "Access-Control-Allow-Origin": "*",
-                "Connection": "keep-alive",
-                "Content-Length": "211",
-                "Content-Type": "application/json; charset=utf-8",
-                "Date": "Fri, 06 Jul 2018 17:24:52 GMT",
-                "ETag": "W/\"d3-KF36NKndDnPhGoh6gRCpvicHkGA\""
-              },
-              "body": "{\"_id\":\"employeeId\",\"name\":\"Christopher Chen\",\"imageUrl\":\"https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548\",\"qid\":\"Q20044574\",\"workEmail\":\"chrichen@paypal.com\",\"userId\":\"chrichen\"}"
+              "headers": {},
+              "body": "{\"id\":\"employeeId\",\"name\":\"Christopher Chen\",\"imageUrl\":\"https://bridgeimages.paypalcorp.com/images/120120/Q20044574.jpg?q=1529695854548\",\"qid\":\"Q20044574\",\"workEmail\":\"chrichen@paypal.com\",\"userId\":\"chrichen\",\"dateCreated\":\"1995-09-07T10:40:52Z\",\"dateUpdated\":\"1995-09-07T10:40:52Z\"}"
             },
             "x-testShouldPass": true,
             "x-testEnabled": true,
@@ -201,7 +194,7 @@
         "tags": [
           "wallets"
         ],
-        "operationId": "UsersChrichenGet3",
+        "operationId": "UsersChrichenGet2",
         "produces": [
           "application/json"
         ],
@@ -264,7 +257,7 @@
         "tags": [
           "wallets"
         ],
-        "operationId": "UsersChrichenPut3",
+        "operationId": "UsersChrichenPut2",
         "produces": [
           "application/json"
         ],
@@ -360,7 +353,7 @@
         "tags": [
           "airdrops"
         ],
-        "operationId": "UsersChrichenActivatePut3",
+        "operationId": "UsersChrichenActivatePut2",
         "produces": [
           "application/json"
         ],
@@ -426,10 +419,66 @@
         }
       }
     },
+    "/webmethods/{uid}": {
+      "get": {
+        "description": "TODO: Add Description",
+        "summary": "get webmethod user by uid",
+        "tags": [
+          "webmethods"
+        ],
+        "operationId": "WebmethodsByUidGet",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "x-paypal-user-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "uid",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
     "/webmethods": {
       "get": {
         "description": "TODO: Add Description",
-        "summary": "get all webmethods call",
+        "summary": "get all webmethod users",
         "tags": [
           "webmethods"
         ],
@@ -458,6 +507,13 @@
             "required": true,
             "type": "string",
             "description": ""
+          },
+          {
+            "name": "x-paypal-admin-id",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
           }
         ],
         "responses": {
@@ -474,7 +530,8 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "chrichen"
+                "x-paypal-user-id": "chrichen",
+                "x-paypal-admin-id": "chrichen"
               }
             },
             "expectedResponse": {
@@ -487,7 +544,7 @@
             },
             "x-testShouldPass": true,
             "x-testEnabled": true,
-            "x-testName": "get all webmethods call",
+            "x-testName": "get all webmethod users",
             "x-testDescription": "TODO: Add Description"
           }
         ],
@@ -639,10 +696,10 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}744898f6-3a99-4cbf-b6e0-3b59af731a0a",
+                "x-paypal-user-id": "{{x-paypal-user-id}}b001cedc-fd08-4750-a607-fcb385219d46",
                 "x-paypal-admin-id": "chrichen"
               },
-              "body": "{\"id\":\"testAirdrop379\",\"description\":\"test airdrop\",\"amount\":100,\"status\":\"active\"}"
+              "body": "{\"id\":\"testAirdrop103\",\"description\":\"test airdrop\",\"amount\":100,\"status\":\"active\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -1183,7 +1240,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}db5701ed-9cc3-435e-b42c-1a369fb333f5"
+                "x-paypal-user-id": "{{x-paypal-user-id}}621eea5c-50bb-4f7e-aed6-ca987d574271"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -1362,7 +1419,7 @@
               "headers": {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "x-paypal-user-id": "{{x-paypal-user-id}}351ba4c5-9e15-4ffb-b4e9-a946a2551aa4"
+                "x-paypal-user-id": "{{x-paypal-user-id}}5fc18919-e31c-4012-8b43-3e4239e989b2"
               },
               "body": "{\"firstName\":\"Christopher\",\"lastName\":\"Chen\"}"
             },
@@ -1616,7 +1673,7 @@
                 "Accept": "application/json",
                 "Content-Type": "application/json"
               },
-              "body": "{\"from\":\"chrichen\",\"to\":[\"vnmaniyar\"],\"amount\":100,\"type\":\"p2p\",\"description\":\"thanks for helping me carry stuff to the car\",\"transactionHash\":\"f3317e29-a37a-4836-9b98-be8be2e539e0\"}"
+              "body": "{\"from\":\"chrichen\",\"to\":[\"vnmaniyar\"],\"amount\":100,\"type\":\"p2p\",\"description\":\"thanks for helping me carry stuff to the car\",\"transactionHash\":\"565cdb56-b2ec-4c6b-aa4c-b9bb3607fe95\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2285,7 +2342,7 @@
                 "Content-Type": "application/json",
                 "x-paypal-user-id": "testPB"
               },
-              "body": "{\"name\":\"Test -- 8d83a75b-a8c1-4b6c-a260-49adaa885b14\",\"description\":\"Test-486836a6-3a2b-4a52-9de0-a32465302d10 Experience\",\"price\":\"21\",\"quantity\":25,\"imageUrl\":\"/path/to/image\",\"locations\":[\"San Jose\",\"Banglore\"],\"categories\":[\"Food\",\"Xyz\"],\"logisticsInfo\":\"something something\"}"
+              "body": "{\"name\":\"Test -- 0669be2b-d6f7-4757-a571-6c46e8c7f0fe\",\"description\":\"Test-a168ec20-7397-4a2f-baf9-84eaa0f06b69 Experience\",\"price\":\"21\",\"quantity\":25,\"imageUrl\":\"/path/to/image\",\"locations\":[\"San Jose\",\"Banglore\"],\"categories\":[\"Food\",\"Xyz\"],\"logisticsInfo\":\"something something\"}"
             },
             "expectedResponse": {
               "x-allowExtraHeaders": true,
@@ -2893,7 +2950,7 @@
     "CreateAirdropAdminrequest": {
       "title": "create airdrop ADMINRequest",
       "example": {
-        "id": "testAirdrop379",
+        "id": "testAirdrop103",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2902,7 +2959,7 @@
       "properties": {
         "id": {
           "description": "",
-          "example": "testAirdrop379",
+          "example": "testAirdrop103",
           "type": "string"
         },
         "description": {
@@ -2929,10 +2986,10 @@
         "status"
       ]
     },
-    "CreateAirdropAdminrequest9": {
-      "title": "create airdrop ADMINRequest9",
+    "CreateAirdropAdminrequest6": {
+      "title": "create airdrop ADMINRequest6",
       "example": {
-        "name": "test - adee1eb3-e486-48d5-9a47-ae76beff2862",
+        "name": "test - 26313833-921e-4f88-b259-d17eb8b15908",
         "description": "test airdrop",
         "amount": 100,
         "status": "complete"
@@ -2941,7 +2998,7 @@
       "properties": {
         "name": {
           "description": "",
-          "example": "test - adee1eb3-e486-48d5-9a47-ae76beff2862",
+          "example": "test - 26313833-921e-4f88-b259-d17eb8b15908",
           "type": "string"
         },
         "description": {
@@ -3057,7 +3114,7 @@
         "amount": 100,
         "type": "p2p",
         "description": "thanks for helping me carry stuff to the car",
-        "transactionHash": "f3317e29-a37a-4836-9b98-be8be2e539e0"
+        "transactionHash": "565cdb56-b2ec-4c6b-aa4c-b9bb3607fe95"
       },
       "type": "object",
       "properties": {
@@ -3094,7 +3151,7 @@
         },
         "transactionHash": {
           "description": "",
-          "example": "f3317e29-a37a-4836-9b98-be8be2e539e0",
+          "example": "565cdb56-b2ec-4c6b-aa4c-b9bb3607fe95",
           "type": "string"
         }
       },
@@ -3226,8 +3283,8 @@
     "CreateRewardrequest": {
       "title": "create rewardRequest",
       "example": {
-        "name": "Test -- 8d83a75b-a8c1-4b6c-a260-49adaa885b14",
-        "description": "Test-486836a6-3a2b-4a52-9de0-a32465302d10 Experience",
+        "name": "Test -- 0669be2b-d6f7-4757-a571-6c46e8c7f0fe",
+        "description": "Test-a168ec20-7397-4a2f-baf9-84eaa0f06b69 Experience",
         "price": "21",
         "quantity": 25,
         "imageUrl": "/path/to/image",
@@ -3245,12 +3302,12 @@
       "properties": {
         "name": {
           "description": "",
-          "example": "Test -- 8d83a75b-a8c1-4b6c-a260-49adaa885b14",
+          "example": "Test -- 0669be2b-d6f7-4757-a571-6c46e8c7f0fe",
           "type": "string"
         },
         "description": {
           "description": "",
-          "example": "Test-486836a6-3a2b-4a52-9de0-a32465302d10 Experience",
+          "example": "Test-a168ec20-7397-4a2f-baf9-84eaa0f06b69 Experience",
           "type": "string"
         },
         "price": {

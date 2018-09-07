@@ -3413,7 +3413,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"from\": \"chrichen\",\n\t\"to\": [\"vnmaniyar\"],\n\t\"transferId\": \"test-transferId\",\n\t\"amount\": 100,\n\t\"type\": \"idea\",\n\t\"note\": \"thanks for helping me carry stuff to the car\",\n\t\"transactionHash\": \"{{$guid}}\",\n\t\"metadata\": {\n\t\t\"idea.title\":\"LiFi Radar Image Recognition\",\n\t\t\"idea.disclosureNumber\": \"D2018.2134\"\n\t}\n}"
+              "raw": "{\n\t\"from\": \"chrichen\",\n\t\"to\": [\"vnmaniyar\"],\n\t\"transferId\": \"test-transferId-1\",\n\t\"amount\": 100,\n\t\"type\": \"p2p\",\n\t\"note\": \"thanks for helping me carry stuff to the car\",\n\t\"transactionHash\": \"{{$guid}}\",\n\t\"metadata\": {\n\t\t\"ideaTitle\":\"LiFi Radar Image Recognition\",\n\t\t\"ideaDisclosureNumber\": \"D2018-2134\"\n\t}\n}"
             },
             "url": "https://{{domain}}.qa.paypal.com:{{port}}/v1/woocoin/newsfeeds"
           },
@@ -3421,7 +3421,7 @@
         },
         {
           "_postman_id": "2500852-0afedf07-07d9-4c1e-bae9-3454aba2d07b",
-          "name": "",
+          "name": "Get NewsFeed By Id",
           "request": {
             "method": "GET",
             "header": [
@@ -3440,13 +3440,15 @@
             ],
             "body": {},
             "url": {
-              "raw": "http://api.paypal.com/v1/woocoin/newsfeeds/:newsfeedId",
-              "protocol": "http",
+              "raw": "https://{{domain}}.qa.paypal.com:{{port}}/v1/woocoin/newsfeeds/:newsfeedId",
+              "protocol": "https",
               "host": [
-                "api",
+                "{{domain}}",
+                "qa",
                 "paypal",
                 "com"
               ],
+              "port": "{{port}}",
               "path": [
                 "v1",
                 "woocoin",
@@ -3480,9 +3482,28 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\t\"description\": \"test newsfeed\",\n        \"initiator\": \"corp-news-id\",\n        \"recipient\": \"test-recipient\",\n        \"users\": [\"test-user1\",\"test-user2\"],\n        \"type\": \"idea\",\n        \"amount\": 1000,\n        \"transactionHash\": \"test-blockchain-hash\"\n}"
+              "raw": "{\n\t\t\"numberOfLikes\": 1\n}"
             },
-            "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/4432423"
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/:newsfeedId",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "v1",
+                "woocoin",
+                "newsfeeds",
+                ":newsfeedId"
+              ],
+              "variable": [
+                {
+                  "key": "newsfeedId",
+                  "value": ""
+                }
+              ]
+            }
           },
           "response": []
         },
@@ -3798,7 +3819,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\", \"taosun\"],\n\t\"type\": \"idea\",\n\t\"metadata\": {\n\t\t\"idea.title\":\"LiFi Radar Image Recognition\",\n\t\t\"idea.disclosureNumber\": \"D2018.2134\"\n\t}\n}"
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\"],\n\t\"type\": \"idea\",\n\t\"metadata\": {\n\t\t\"ideaTitle\":\"LiFi Radar Image Recognition\",\n\t\t\"ideaDisclosureNumber\": \"D2018-2134\"\n\t}\n}"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
           },
@@ -3825,7 +3846,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\", \"taosun\"],\n\t\"type\": \"p2p\",\n\t\"amount\": \"100\"\n}"
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"mtodasco\", \"gmadaan\"],\n\t\"type\": \"idea\",\n\t\"amount\": \"100000000000\"\n}"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
           },
@@ -4314,7 +4335,7 @@
   ],
   "variable": [
     {
-      "id": "9b1ea192-9bf5-4bbc-b8fa-2a2f88fd9d4c",
+      "id": "62414017-acaa-48a7-a574-e74fce8a8017",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

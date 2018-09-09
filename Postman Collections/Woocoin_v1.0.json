@@ -4007,7 +4007,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{domain}}:{{port}}/v1/woocoin/rewards?limit=20&offset=0&filter={\"status\":\"active\"}&orderBy={\"name\":1}",
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/rewards?limit=20&offset=0&filter={\"status\":\"inStock\"}&orderBy={\"name\":1}",
               "protocol": "https",
               "host": [
                 "{{domain}}"
@@ -4031,7 +4031,7 @@
                 },
                 {
                   "key": "filter",
-                  "value": "{\"status\":\"active\"}",
+                  "value": "{\"status\":\"inStock\"}",
                   "equals": true
                 },
                 {
@@ -4335,7 +4335,7 @@
   ],
   "variable": [
     {
-      "id": "1cf981f8-96c3-45fc-a04e-979e4ba31748",
+      "id": "e2a8cb83-1818-4b10-8d1f-efb004e1ed75",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

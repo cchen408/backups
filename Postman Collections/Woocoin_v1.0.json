@@ -3895,6 +3895,60 @@
             }
           },
           "response": []
+        },
+        {
+          "_postman_id": "2500852-21fbdd8a-61e8-41d6-843b-039ca5c6fa74",
+          "name": "create transfer idea submission Copy",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{x-paypal-user-id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\", \"taosun\"],\n\t\"type\": \"idea\",\n\t\"metadata\": {\n\t\t\"idea.title\":\"LiFi Radar Image Recognition\",\n\t\t\"idea.disclosureNumber\": \"D2018.2134\"\n\t}\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2500852-a5ec288e-4c56-48f9-8a98-05e7e2f956da",
+          "name": "create transfer 2018 booth",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{x-paypal-user-id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\"],\n\t\"type\": \"expo\",\n\t\"subtype\": \"2018\",\n\t\"note\": \"if the booth wants a subtitle they can put it here\",\n\t\"metadata\": {\n\t\t\"booth\": \"Test Booth\"\n\t}\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
+          },
+          "response": []
         }
       ]
     },
@@ -4335,7 +4389,7 @@
   ],
   "variable": [
     {
-      "id": "e2a8cb83-1818-4b10-8d1f-efb004e1ed75",
+      "id": "324b3e8a-7be1-4bab-ba42-bb5b25a3db7c",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

@@ -3439,29 +3439,7 @@
               }
             ],
             "body": {},
-            "url": {
-              "raw": "https://{{domain}}.qa.paypal.com:{{port}}/v1/woocoin/newsfeeds/:newsfeedId",
-              "protocol": "https",
-              "host": [
-                "{{domain}}",
-                "qa",
-                "paypal",
-                "com"
-              ],
-              "port": "{{port}}",
-              "path": [
-                "v1",
-                "woocoin",
-                "newsfeeds",
-                ":newsfeedId"
-              ],
-              "variable": [
-                {
-                  "key": "newsfeedId",
-                  "value": "{{newsfeedId}}"
-                }
-              ]
-            }
+            "url": "https://{{domain}}.qa.paypal.com:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}"
           },
           "response": []
         },
@@ -4389,7 +4367,7 @@
   ],
   "variable": [
     {
-      "id": "324b3e8a-7be1-4bab-ba42-bb5b25a3db7c",
+      "id": "046a4eec-81fa-473d-8705-c4407a43e91a",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

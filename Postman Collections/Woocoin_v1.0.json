@@ -3998,7 +3998,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Test -- {{$guid}}\",\n    \"description\": \"Test-{{$guid}} Experience\",\n    \"price\": \"21\",\n    \"quantity\": 25,\n    \"imageUrl\" : \"/path/to/image\",\n    \"locations\" : [\"San Jose\", \"Banglore\"],\n    \"categories\" : [\"Food\", \"Xyz\"],\n    \"logisticsInfo\" : \"something something\"\n}\n\n\n"
+              "raw": "{\n    \"name\": \"Mentoring session with Doniel Sutton, SVP of People\",\n    \"description\": \"1 hour mentoring session with Doniel Sutton, SVP of People\",\n    \"price\": \"15000\",\n    \"quantity\": 4,\n    \"imageUrl\" : \"https://www.paypalobjects.com/digitalassets/c/innovationlab/giftbox_450x200.png\",\n    \"locations\" : [\"San Jose\"],\n    \"categories\" : [\"Mentoring\"],\n    \"logisticsInfo\" : \"Work with EA, Alissa Colaizzi to arrange\"\n}\n\n\n"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/rewards"
           },
@@ -4367,7 +4367,7 @@
   ],
   "variable": [
     {
-      "id": "ff0529a3-9f8c-4921-92a4-b5946d2e1532",
+      "id": "b5aba512-626a-4a2a-b1e1-803f1fc5f70d",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

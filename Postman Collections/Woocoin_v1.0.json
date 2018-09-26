@@ -3797,7 +3797,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\"],\n\t\"type\": \"idea\",\n\t\"metadata\": {\n\t\t\"ideaTitle\":\"LiFi Radar Image Recognition\",\n\t\t\"ideaDisclosureNumber\": \"D2018-2134\"\n\t}\n}"
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\", \"taosun\"],\n\t\"type\": \"idea\",\n\t\"amount\": \"100\"\n}"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
           },
@@ -4367,7 +4367,7 @@
   ],
   "variable": [
     {
-      "id": "5de049c3-4b12-47ce-8ffd-0d5d6b17ac09",
+      "id": "62797804-c94b-4226-b8bd-61f674a96b0a",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

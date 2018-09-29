@@ -1935,10 +1935,37 @@
               {
                 "key": "Content-Type",
                 "value": "application/json"
+              },
+              {
+                "key": "x-paypal-admin-id",
+                "value": "{{userId}}"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{userId}}"
               }
             ],
             "body": {},
-            "url": "https://{{domain}}:{{port}}/v1/woocoin/activities"
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/activities?userId={{userId}}",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "v1",
+                "woocoin",
+                "activities"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}",
+                  "equals": true
+                }
+              ]
+            }
           },
           "response": []
         }
@@ -3462,26 +3489,34 @@
               "mode": "raw",
               "raw": "{\n\t\t\"numberOfLikes\": 1\n}"
             },
-            "url": {
-              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/:newsfeedId",
-              "protocol": "https",
-              "host": [
-                "{{domain}}"
-              ],
-              "port": "{{port}}",
-              "path": [
-                "v1",
-                "woocoin",
-                "newsfeeds",
-                ":newsfeedId"
-              ],
-              "variable": [
-                {
-                  "key": "newsfeedId",
-                  "value": ""
-                }
-              ]
-            }
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2500852-94e176ca-40b2-4194-8eb7-9e30330d6172",
+          "name": "flag newsfeed",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{userId}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\t\"numberOfLikes\": 1\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}/flag"
           },
           "response": []
         },
@@ -3562,8 +3597,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-fee1ad10-4dea-4a2d-b7b8-5c8535050f5b",
-          "name": "Untitled Request",
+          "_postman_id": "2500852-486e45d3-e1ae-4ffe-9b4b-a0b038d962a5",
+          "name": "get all flagged",
           "request": {
             "method": "GET",
             "header": [
@@ -3576,32 +3611,42 @@
                 "value": "application/json"
               },
               {
-                "key": "x-paypal-user-id",
+                "key": "x-paypal-admin-id",
+                "value": "{{userId}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"newsfeedId\": \"{{newsfeedId}}\",\n\t\"flaggedBy\": \"chrichen\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/flagged"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2500852-fee1ad10-4dea-4a2d-b7b8-5c8535050f5b",
+          "name": "update flagged",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-admin-user-id",
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
-            "url": {
-              "raw": "http://api.paypal.com/v1/woocoin/newsfeeds/:newsfeedId",
-              "protocol": "http",
-              "host": [
-                "api",
-                "paypal",
-                "com"
-              ],
-              "path": [
-                "v1",
-                "woocoin",
-                "newsfeeds",
-                ":newsfeedId"
-              ],
-              "variable": [
-                {
-                  "key": "newsfeedId",
-                  "value": "{{newsfeedId}}"
-                }
-              ]
-            }
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"flaggedByComment\": \"wow this dude is disgusting\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/flagged/{{flaggedId}}"
           },
           "response": []
         },
@@ -3650,29 +3695,6 @@
                 }
               ]
             }
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "2500852-0153bf4e-5bca-4f46-8e78-476633225fa8",
-          "name": "update newsfeed",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\t\"description\": \"test newsfeed\",\n        \"initiator\": \"corp-news-id\",\n        \"recipient\": \"test-recipient\",\n        \"users\": [\"test-user1\",\"test-user2\"],\n        \"type\": \"idea\",\n        \"amount\": 1000,\n        \"transactionHash\": \"test-blockchain-hash\"\n}"
-            },
-            "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/4432423"
           },
           "response": []
         },
@@ -3998,7 +4020,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Mentoring session with Doniel Sutton, SVP of People\",\n    \"description\": \"1 hour mentoring session with Doniel Sutton, SVP of People\",\n    \"price\": \"15000\",\n    \"quantity\": 4,\n    \"imageUrl\" : \"https://www.paypalobjects.com/digitalassets/c/innovationlab/giftbox_450x200.png\",\n    \"locations\" : [\"San Jose\"],\n    \"categories\" : [\"Mentoring\"],\n    \"logisticsInfo\" : \"Work with EA, Alissa Colaizzi to arrange\"\n}\n\n\n"
+              "raw": "{\n    \"name\": \"Mentoring session with Doniel Sutton, SVP of People {{$guid}}\",\n    \"description\": \"1 hour mentoring session with Doniel Sutton, SVP of People\",\n    \"price\": \"15000\",\n    \"quantity\": 100,\n    \"imageUrl\" : \"https://www.paypalobjects.com/digitalassets/c/innovationlab/giftbox_450x200.png\",\n    \"locations\" : [\"San Jose\"],\n    \"categories\" : [\"Mentoring\"],\n    \"logisticsInfo\" : \"Work with EA, Alissa Colaizzi to arrange\"\n}\n\n\n"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/rewards"
           },
@@ -4224,7 +4246,7 @@
             "header": [
               {
                 "key": "x-paypal-user-id",
-                "value": "testPB"
+                "value": "{{userId}}"
               },
               {
                 "key": "Accept",
@@ -4367,7 +4389,7 @@
   ],
   "variable": [
     {
-      "id": "d55770bc-6f4b-4e08-8ce5-532613719917",
+      "id": "0007f63f-f839-420b-9b08-37c475742c05",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

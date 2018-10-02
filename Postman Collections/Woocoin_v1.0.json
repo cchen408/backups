@@ -3397,6 +3397,59 @@
           "response": []
         },
         {
+          "_postman_id": "2500852-be9984ae-59a8-49b4-b090-ec88285e204b",
+          "name": "get all newsfeed not flagged not deletec",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{x-paypal-user-id}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0&status={\"$nin\": [\"deleted\",\"flagged\"]}",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "v1",
+                "woocoin",
+                "newsfeeds"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "equals": true
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "equals": true
+                },
+                {
+                  "key": "status",
+                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}",
+                  "equals": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2500852-0a43f08a-22d1-4add-a673-1444f9aca359",
           "name": "create newsfeed",
           "event": [
@@ -3521,8 +3574,70 @@
           "response": []
         },
         {
+          "_postman_id": "2500852-651499fa-b399-4e62-bec9-2ab670ac56cb",
+          "name": "resolve flagged newsfeed delete",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{userId}}"
+              },
+              {
+                "key": "x-paypal-admin-id",
+                "value": "{{userId}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"resolution\": \"delete\",\n\t\"adminComment\": \"this dude is a pervert\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}/flag"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2500852-9656a958-e9c2-4dec-9070-50ca4adfd28d",
+          "name": "resolve flagged newsfeed dismiss",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{userId}}"
+              },
+              {
+                "key": "x-paypal-admin-id",
+                "value": "{{userId}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"resolution\": \"dismiss\",\n\t\"adminComment\": \"this is totally appropriate\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}/flag"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2500852-77b544fa-49b5-45e8-a18a-f5af6fb88ce6",
-          "name": "",
+          "name": "like newsfeed",
           "request": {
             "method": "PUT",
             "header": [
@@ -3540,28 +3655,7 @@
               }
             ],
             "body": {},
-            "url": {
-              "raw": "http://api.paypal.com/v1/woocoin/newsfeeds/:newsfeedId/like",
-              "protocol": "http",
-              "host": [
-                "api",
-                "paypal",
-                "com"
-              ],
-              "path": [
-                "v1",
-                "woocoin",
-                "newsfeeds",
-                ":newsfeedId",
-                "like"
-              ],
-              "variable": [
-                {
-                  "key": "newsfeedId",
-                  "value": "{{newsfeedId}}"
-                }
-              ]
-            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}/like",
             "description": "Like or unlike a newsfeed event"
           },
           "response": []
@@ -3697,52 +3791,6 @@
             }
           },
           "response": []
-        },
-        {
-          "_postman_id": "2500852-972fb532-dcc5-4bc6-83dd-b544bfa61771",
-          "name": "Untitled Request",
-          "request": {
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "x-paypal-user-id",
-                "value": "{{x-paypal-user-id}}"
-              }
-            ],
-            "body": {},
-            "url": {
-              "raw": "http://api.paypal.com/v1/woocoin/newsfeeds/:newsfeedId/like",
-              "protocol": "http",
-              "host": [
-                "api",
-                "paypal",
-                "com"
-              ],
-              "path": [
-                "v1",
-                "woocoin",
-                "newsfeeds",
-                ":newsfeedId",
-                "like"
-              ],
-              "variable": [
-                {
-                  "key": "newsfeedId",
-                  "value": "{{newsfeedId}}"
-                }
-              ]
-            },
-            "description": "Like or unlike a newsfeed event"
-          },
-          "response": []
         }
       ]
     },
@@ -3846,7 +3894,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"mtodasco\", \"gmadaan\"],\n\t\"type\": \"idea\",\n\t\"amount\": \"100000000000\"\n}"
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"taosun\", \"chrichen\"],\n\t\"type\": \"p2p\",\n\t\"amount\": \"100000000000\"\n}"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
           },
@@ -3926,6 +3974,33 @@
         {
           "_postman_id": "2500852-a5ec288e-4c56-48f9-8a98-05e7e2f956da",
           "name": "create transfer 2018 booth",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{x-paypal-user-id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\"],\n\t\"type\": \"expo\",\n\t\"subtype\": \"2018\",\n\t\"note\": \"if the booth wants a subtitle they can put it here\",\n\t\"metadata\": {\n\t\t\"booth\": \"Test Booth\"\n\t}\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2500852-0f6106ba-031b-4918-ad0e-4ce4b4fa5076",
+          "name": "create transfer 2018 booth Copy",
           "request": {
             "method": "POST",
             "header": [
@@ -4389,7 +4464,7 @@
   ],
   "variable": [
     {
-      "id": "d0db6db6-f632-477f-9b11-0990687be7ed",
+      "id": "9d7570b9-e428-46af-a065-bba279d22c0c",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

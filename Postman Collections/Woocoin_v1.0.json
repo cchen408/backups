@@ -4039,12 +4039,12 @@
             {
               "listen": "prerequest",
               "script": {
-                "id": "134866b9-3051-43a4-9746-bdcee04f0562",
+                "id": "159cc4e0-4ee4-4cb0-bf57-13bcb6e0b114",
                 "type": "text/javascript",
                 "exec": [
-                  "pm.environment.set(\"domain\", \"localhost\");",
+                  "// pm.environment.set(\"domain\", \"localhost\");",
                   "",
-                  "pm.environment.set(\"port\", \"8443\");"
+                  "// pm.environment.set(\"port\", \"8443\");"
                 ]
               }
             },
@@ -4095,7 +4095,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Mentoring session with Doniel Sutton, SVP of People {{$guid}}\",\n    \"description\": \"1 hour mentoring session with Doniel Sutton, SVP of People\",\n    \"price\": \"15000\",\n    \"quantity\": 100,\n    \"imageUrl\" : \"https://www.paypalobjects.com/digitalassets/c/innovationlab/giftbox_450x200.png\",\n    \"locations\" : [\"San Jose\"],\n    \"categories\" : [\"Mentoring\"],\n    \"logisticsInfo\" : \"Work with EA, Alissa Colaizzi to arrange\"\n}\n\n\n"
+              "raw": "{\n    \"name\": \"Bay Area Food Tour with Kim Nguyen\",\n    \"description\": \"Eat and drink your way through the Bay Area with San Jose-native Kim Nguyen! You'll walk away with dozens of new ideas for restaurants to visit.\",\n    \"logisticsInfo\": \"Reach out to Kim Nguyen\",\n    \"quantity\": 3,\n    \"locations\" : [\"San Jose\"],\n    \"price\": \"1000\",\n    \"imageUrl\": \"https://engineering.paypalcorp.com/ecat/content/dam/PayPalDigitalAssets/spartaImages/GlobalImages/innovationlab/kim.png\"\n}\n\n\n"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/rewards"
           },
@@ -4464,7 +4464,7 @@
   ],
   "variable": [
     {
-      "id": "9d7570b9-e428-46af-a065-bba279d22c0c",
+      "id": "f842d044-4fed-43ab-b8ac-c47d6b094284",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

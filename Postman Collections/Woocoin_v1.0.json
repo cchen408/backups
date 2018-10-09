@@ -626,6 +626,33 @@
           "response": []
         },
         {
+          "_postman_id": "2500852-3f16a5be-9fc7-41dd-8717-a971b30bc874",
+          "name": "refresh users",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{userId}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/users/refresh"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2500852-ece60b1c-537b-423f-beee-f61187c1f0e4",
           "name": "get user",
           "request": {
@@ -4464,7 +4491,7 @@
   ],
   "variable": [
     {
-      "id": "3706f7f2-d3ad-410a-b043-8e9985a77cb0",
+      "id": "2f776f3b-4d8e-47a7-922d-40cb789769cc",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

@@ -3396,7 +3396,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0",
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0&filters={\"userId\":\"vnmaniyar\", \"status\": [\"active\"]}",
               "protocol": "https",
               "host": [
                 "{{domain}}"
@@ -3416,6 +3416,11 @@
                 {
                   "key": "offset",
                   "value": "0",
+                  "equals": true
+                },
+                {
+                  "key": "filters",
+                  "value": "{\"userId\":\"vnmaniyar\", \"status\": [\"active\"]}",
                   "equals": true
                 }
               ]
@@ -3468,7 +3473,7 @@
                 },
                 {
                   "key": "status",
-                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}",
+                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n",
                   "equals": true
                 }
               ]
@@ -4491,7 +4496,7 @@
   ],
   "variable": [
     {
-      "id": "fdb463b7-97c7-4584-bda1-5600755ce31b",
+      "id": "3df77dee-d721-4736-954b-bf5bae7d37c2",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

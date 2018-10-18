@@ -305,7 +305,6 @@
               "listen": "test",
               "script": {
                 "id": "22750c93-f441-47ac-92dc-ad25e8356ac1",
-                "type": "text/javascript",
                 "exec": [
                   "var _ = require('lodash');",
                   "",
@@ -350,22 +349,18 @@
                   "// });",
                   "",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             },
             {
               "listen": "prerequest",
               "script": {
                 "id": "d76557e1-34d4-4527-a014-1a3aa72f59b2",
-                "type": "text/javascript",
                 "exec": [
-                  "if(!pm.environment.get(\"userId\")){",
-                  "  pm.environment.set(\"userId\", \"userId-{{$guid}}\");        ",
-                  "}",
-                  "",
-                  "",
                   ""
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -382,7 +377,12 @@
               },
               {
                 "key": "x-paypal-user-id",
-                "value": "{{x-paypal-user-id}}"
+                "value": "{{userId}}"
+              },
+              {
+                "key": "x-paypal-security-context",
+                "value": "{}",
+                "type": "text"
               }
             ],
             "body": {
@@ -4496,7 +4496,7 @@
   ],
   "variable": [
     {
-      "id": "a13b4ddf-fb0b-49bd-9c4b-a29a9799df5a",
+      "id": "8f6ae46c-baad-487f-8089-5d4d2fa05506",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

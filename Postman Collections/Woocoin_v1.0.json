@@ -677,6 +677,30 @@
           "response": []
         },
         {
+          "_postman_id": "2500852-7d77eb57-8797-494a-9205-caa87071368a",
+          "name": "delete user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{userId}}"
+              }
+            ],
+            "body": {},
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/users/{{userId}}"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2500852-48dd858e-ff44-4a2b-9649-2c5389159bcd",
           "name": "list users",
           "request": {
@@ -4496,7 +4520,7 @@
   ],
   "variable": [
     {
-      "id": "8f6ae46c-baad-487f-8089-5d4d2fa05506",
+      "id": "82c92b53-715b-4971-9eae-43802c788ad4",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

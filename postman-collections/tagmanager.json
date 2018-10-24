@@ -590,7 +590,7 @@
         },
         {
           "_postman_id": "928474ca-2a11-46a9-867a-2814de9ae2d2",
-          "name": "GET products Copy",
+          "name": "GET product activities",
           "request": {
             "method": "GET",
             "header": [

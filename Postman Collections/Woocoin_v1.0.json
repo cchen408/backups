@@ -3506,6 +3506,64 @@
           "response": []
         },
         {
+          "_postman_id": "2500852-64acfb5f-0190-40a5-b6df-7f69063f8fa1",
+          "name": "get all user specific newsfeed not flagged not deletec Copy",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{x-paypal-user-id}}"
+              }
+            ],
+            "body": {},
+            "url": {
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0&status={\"$nin\": [\"deleted\",\"flagged\"]}\n&userId=chrichen",
+              "protocol": "https",
+              "host": [
+                "{{domain}}"
+              ],
+              "port": "{{port}}",
+              "path": [
+                "v1",
+                "woocoin",
+                "newsfeeds"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "equals": true
+                },
+                {
+                  "key": "offset",
+                  "value": "0",
+                  "equals": true
+                },
+                {
+                  "key": "status",
+                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n",
+                  "equals": true
+                },
+                {
+                  "key": "userId",
+                  "value": "chrichen",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2500852-0a43f08a-22d1-4add-a673-1444f9aca359",
           "name": "create newsfeed",
           "event": [
@@ -4520,7 +4578,7 @@
   ],
   "variable": [
     {
-      "id": "86daa9f0-4116-424f-88c6-2c49aa2b3e8f",
+      "id": "c70d151e-540c-42df-b737-c6f37c1a5981",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

@@ -3473,7 +3473,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0&status={\"$nin\": [\"deleted\",\"flagged\"]}",
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?status={\"$nin\": [\"deleted\",\"flagged\"]}",
               "protocol": "https",
               "host": [
                 "{{domain}}"
@@ -3486,19 +3486,15 @@
               ],
               "query": [
                 {
-                  "key": "limit",
-                  "value": "20",
-                  "equals": true
-                },
-                {
-                  "key": "offset",
-                  "value": "0",
-                  "equals": true
-                },
-                {
                   "key": "status",
                   "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n",
                   "equals": true
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
                 }
               ]
             }
@@ -3526,7 +3522,7 @@
             ],
             "body": {},
             "url": {
-              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0&status={\"$nin\": [\"deleted\",\"flagged\"]}\n&userId=chrichen",
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?status={\"$nin\": [\"deleted\",\"flagged\"]}\n&userId=chrichen",
               "protocol": "https",
               "host": [
                 "{{domain}}"
@@ -3539,16 +3535,6 @@
               ],
               "query": [
                 {
-                  "key": "limit",
-                  "value": "20",
-                  "equals": true
-                },
-                {
-                  "key": "offset",
-                  "value": "0",
-                  "equals": true
-                },
-                {
                   "key": "status",
                   "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n",
                   "equals": true
@@ -3556,7 +3542,7 @@
                 {
                   "key": "userId",
                   "value": "chrichen",
-                  "type": "text"
+                  "equals": true
                 }
               ]
             }
@@ -4578,7 +4564,7 @@
   ],
   "variable": [
     {
-      "id": "c70d151e-540c-42df-b737-c6f37c1a5981",
+      "id": "95c5d687-cdd7-4fb5-9a29-675839de4761",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

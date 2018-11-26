@@ -600,7 +600,7 @@
               },
               {
                 "key": "X-PAYPAL-SECURITY-CONTEXT",
-                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"\", \"account_number\":\"\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"\", \"account_number\":\"\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"{{accountNumber}}\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
               }
             ],
             "body": {
@@ -608,7 +608,7 @@
               "raw": "{\n    \"owner_id\": \"EDFMQVX5UWQLY\",\n    \"owner_type\": \"PAYPAL\",\n    \"name\": \"Test container for demo\",\n    \"url\":\"www.paypal.com\",\n    \"description\": \"test container\",\n    \"published\": false,\n    \"tags\": [{\n        \"tag_definition_id\": \"analytics\",\n        \"weight\": \"333\",\n        \"enabled\": true,\n        \"configuration\": [{\n          \"id\": \"analytics-id\",\n          \"value\": \"test_value2\"\n        }],\n        \"triggers\": [\"trigger_id_2\", \"trigger_id_3\"]\n      },\n        {\n          \"tag_definition_id\": \"credit\",\n          \"weight\": \"444\",\n          \"enabled\": true,\n          \"configuration\": [{\n            \"id\": \"limit\",\n            \"value\": \"test_value3\"\n        }]\n      }],\n    \"triggers\": [{\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_2\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_2\",\n          \"value\": \"test_value\"\n        },\n        {\n          \"id\": \"test_config_4\",\n          \"value\": \"test_value\"\n        }]\n      },\n      {\n        \"id\": \"test_trigger_1\",\n        \"trigger_definition_id\": \"trigger_id_3\",\n        \"type\": \"snippetRun\",\n        \"description\": \"test description\",\n        \"blocking\": false,\n        \"filters\": [{\n          \"type\": \"builtin\",\n          \"variable\": \"test variable\",\n          \"operator\": \"equals\",\n          \"value\": \"test value\"\n        }],\n        \"configuration\": [{\n          \"id\": \"test_config_3\",\n          \"value\": \"test_value\"\n        }]\n      }]\n}"
             },
             "url": {
-              "raw": "https://{{domain}}:{{port}}/v1/offers/products/activities?product_name=TSR&merchant_id=123&status=opt_out",
+              "raw": "https://{{domain}}:{{port}}/v1/offers/products/activities?product_name=tcr",
               "protocol": "https",
               "host": [
                 "{{domain}}"
@@ -623,18 +623,20 @@
               "query": [
                 {
                   "key": "product_name",
-                  "value": "TSR",
+                  "value": "tcr",
                   "equals": true
                 },
                 {
                   "key": "merchant_id",
-                  "value": "123",
-                  "type": "text"
+                  "value": "test-merchant-id-204",
+                  "equals": true,
+                  "disabled": true
                 },
                 {
                   "key": "status",
                   "value": "opt_out",
-                  "type": "text"
+                  "equals": true,
+                  "disabled": true
                 }
               ]
             }
@@ -653,12 +655,12 @@
               },
               {
                 "key": "X-PAYPAL-SECURITY-CONTEXT",
-                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"\", \"account_number\":\"\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
+                "value": "{ \"actor\":{ \"id\":\"17600417\", \"party_id\":\"\", \"account_number\":\"\", \"user_type\":\"API_CALLER\", \"auth_state\":\"LOGGEDIN\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ] }, \"subjects\":[ { \"subject\":{ \"id\":\"17600417\", \"auth_claims\":[ \"USERNAME\", \"PASSWORD\" ], \"auth_state\":\"LOGGEDIN\", \"account_number\":\"{{accountNumber}}\", \"encrypted_account_number\":\"{{encryptedAccountNumber}}\", \"party_id\":\"2260518959189500388\", \"authenticating_user\":true, \"user_type\":\"CONSUMER\" }, \"features\":[ ] } ], \"auth_token\":\"4KUV3P1l9cfVKWHgev9dYte__mNnlTSSPQThxlPvSsbLBk2AWHVfQLuKB6lxqtCUdmxXwKSUAhGc3Q3gl19Gy_qhyFC2nWCM0tTwE0pW1DZ9gwrmAaKII6ber2i83hDk-dS7w0\", \"auth_token_type\":\"SESSION_TOKEN\", \"scopes\":[ \"*\" ], \"global_session_id\":\"I2dc151f4-0128-433c-a9b6-d3edc726bbcf\", \"last_validated\":1493828476, \"version\":\"1.2\", \"claims\":{ \"actor_payer_id\":\"EDFMQVX5UWQLY\", \"subject_payer_id\":\"EDFMQVX5UWQLY\" }, \"signature\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6ImF1dGhfc2VjdXJpdHlfY29udGV4dF9zaWduX2tleSJ9.eyJpYXQiOiIxNDkzODI4NDc3IiwiZXhwIjoiMTQ5Mzg1NzI3NyIsInNoYTI1Nl9kaWdlc3QiOiJOcHlkYWFvbC1Pa2dId28ydXBXMWlwZnpTWDZwaW9tQUNBV29jemc5YUswIn0.qlM_7Tyc7afd6U9wXN2D8Z3tBWzBK6WPSii8qsXggoSdVB1yWcLV_mVuJ9mKvRoFg80GdVxOeXRG4BMjRb9rpalKPVW8VLxlNeE47t16gbtPT5PkFizQhNxO4WEnSJC7f_ZLRW9tpM35Jt0OTEvZ8xoBx2XgoTJncexKg49sg9E\", \"edge_authorization\":{ \"policy_decision\":\"PERMIT\", \"obligations\":[ ] } }"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"merchant_id\": \"test-merchant-id-{{$randomInt}}\",\n\t\"status\": \"opt_out\",\n\t\"product_name\": \"tcr\"\n}"
+              "raw": "{\n\t\"merchant_id\": \"test-merchant-id-24\",\n\t\"status\": \"opt_out\",\n\t\"product_name\": \"tcr\"\n}"
             },
             "url": {
               "raw": "https://{{domain}}:{{port}}/v1/offers/products/activities",

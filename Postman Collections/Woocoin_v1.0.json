@@ -4001,6 +4001,33 @@
           "response": []
         },
         {
+          "_postman_id": "2500852-0f680ade-d6aa-482c-bb1e-24d7a4819216",
+          "name": "create transfer earn",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-paypal-user-id",
+                "value": "{{x-paypal-user-id}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"taosun\", \"chrichen\"],\n\t\"type\": \"p2p\",\n\t\"amount\": \"100000000000\"\n}"
+            },
+            "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "2500852-cf577f8c-b8a4-4ea5-bc46-2e4680bd4ce7",
           "name": "",
           "request": {
@@ -4564,7 +4591,7 @@
   ],
   "variable": [
     {
-      "id": "f21e2192-4a11-4724-af75-366d706d9f27",
+      "id": "b0b4ee60-b31c-4ef9-8d35-7d5be8b42fce",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

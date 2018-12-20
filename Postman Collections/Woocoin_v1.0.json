@@ -4021,7 +4021,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"taosun\", \"chrichen\"],\n\t\"type\": \"p2p\",\n\t\"amount\": \"100000000000\"\n}"
+              "raw": "{\n\t\"from\": \"god\",\n\t\"to\": [\"chrichen\"],\n\t\"note\": \"First Place in MUSE Idea Contest: D2018.2573: Offer Disablement on Merchant Properties Based on Fraud Prediction Models & Data Declustering\",\n\t\"type\": \"earn\",\n\t\"amount\": \"1000\"\n}"
             },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/transfers"
           },
@@ -4591,7 +4591,7 @@
   ],
   "variable": [
     {
-      "id": "f851f3f4-e461-479d-bee4-bea5165e61ba",
+      "id": "466f7a4b-2622-4667-92e0-aade214331a3",
       "key": "userId",
       "value": "chrichen",
       "type": "string",

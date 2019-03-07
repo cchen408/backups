@@ -645,7 +645,7 @@
         },
         {
           "_postman_id": "c39c3f93-c55b-44c9-bfe1-6ad16de129a2",
-          "name": "PUT create product activities",
+          "name": "UPSERT create product activities",
           "request": {
             "method": "PUT",
             "header": [

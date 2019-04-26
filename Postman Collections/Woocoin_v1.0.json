@@ -7,12 +7,9 @@
   },
   "item": [
     {
-      "_postman_id": "2500852-cb8d6515-8f2c-4daf-b263-432ccc6af3f1",
       "name": "users",
-      "description": "Folder for users",
       "item": [
         {
-          "_postman_id": "2500852-cec87235-402a-4f49-8777-c95554b53dfc",
           "name": "create user ADMIN",
           "event": [
             {
@@ -68,6 +65,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-cec87235-402a-4f49-8777-c95554b53dfc",
           "request": {
             "method": "PUT",
             "header": [
@@ -298,7 +296,6 @@
           ]
         },
         {
-          "_postman_id": "2500852-635d398c-b214-4cc5-90ea-bd40238100d4",
           "name": "create (upsert) user",
           "event": [
             {
@@ -364,6 +361,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-635d398c-b214-4cc5-90ea-bd40238100d4",
           "request": {
             "method": "PUT",
             "header": [
@@ -599,8 +597,8 @@
           ]
         },
         {
-          "_postman_id": "2500852-4b1191c5-55d9-4f51-9d52-97ff7bcb9da3",
           "name": "activate user",
+          "_postman_id": "2500852-4b1191c5-55d9-4f51-9d52-97ff7bcb9da3",
           "request": {
             "method": "PUT",
             "header": [
@@ -626,8 +624,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-3f16a5be-9fc7-41dd-8717-a971b30bc874",
           "name": "refresh users",
+          "_postman_id": "2500852-3f16a5be-9fc7-41dd-8717-a971b30bc874",
           "request": {
             "method": "POST",
             "header": [
@@ -653,8 +651,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-ece60b1c-537b-423f-beee-f61187c1f0e4",
           "name": "get user",
+          "_postman_id": "2500852-ece60b1c-537b-423f-beee-f61187c1f0e4",
           "request": {
             "method": "GET",
             "header": [
@@ -671,14 +669,17 @@
                 "value": "{{userId}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/users/{{userId}}"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-7d77eb57-8797-494a-9205-caa87071368a",
           "name": "delete user",
+          "_postman_id": "2500852-7d77eb57-8797-494a-9205-caa87071368a",
           "request": {
             "method": "GET",
             "header": [
@@ -695,14 +696,17 @@
                 "value": "{{userId}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/users/{{userId}}"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-48dd858e-ff44-4a2b-9649-2c5389159bcd",
           "name": "list users",
+          "_postman_id": "2500852-48dd858e-ff44-4a2b-9649-2c5389159bcd",
           "request": {
             "method": "GET",
             "header": [
@@ -719,12 +723,17 @@
                 "value": "{{userId}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/users"
           },
           "response": []
         }
       ],
+      "_postman_id": "2500852-cb8d6515-8f2c-4daf-b263-432ccc6af3f1",
+      "description": "Folder for users",
       "event": [
         {
           "listen": "prerequest",
@@ -749,13 +758,11 @@
       ]
     },
     {
-      "_postman_id": "2500852-925b4bd1-d1eb-42d2-bf68-0abe09912057",
       "name": "webmethods",
-      "description": "Folder for users",
       "item": [
         {
-          "_postman_id": "2500852-d531efd6-81fb-43ed-8d85-bd142b039f1f",
           "name": "get webmethod user by uid",
+          "_postman_id": "2500852-d531efd6-81fb-43ed-8d85-bd142b039f1f",
           "request": {
             "method": "GET",
             "header": [
@@ -772,14 +779,17 @@
                 "value": "{{userId}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/webmethods/{{uid}}"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-0bf917b7-c226-4f17-ac16-16d1d2524a83",
           "name": "get all webmethod users",
+          "_postman_id": "2500852-0bf917b7-c226-4f17-ac16-16d1d2524a83",
           "request": {
             "method": "GET",
             "header": [
@@ -800,14 +810,17 @@
                 "value": "{{userId}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/webmethods"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-bc3d21b9-c6db-4ca5-8c7f-4b91e2f5d3d5",
           "name": "get all webmethod users Copy",
+          "_postman_id": "2500852-bc3d21b9-c6db-4ca5-8c7f-4b91e2f5d3d5",
           "request": {
             "method": "GET",
             "header": [
@@ -828,12 +841,17 @@
                 "value": "{{userId}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/webmethods"
           },
           "response": []
         }
       ],
+      "_postman_id": "2500852-925b4bd1-d1eb-42d2-bf68-0abe09912057",
+      "description": "Folder for users",
       "event": [
         {
           "listen": "prerequest",
@@ -858,12 +876,9 @@
       ]
     },
     {
-      "_postman_id": "2500852-ea72f464-f6e8-437d-afb4-c2440843a443",
       "name": "airdrops",
-      "description": "Folder for users",
       "item": [
         {
-          "_postman_id": "2500852-4968f38f-c5f6-4ef6-833b-12c958815c82",
           "name": "create airdrop ADMIN",
           "event": [
             {
@@ -919,6 +934,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-4968f38f-c5f6-4ef6-833b-12c958815c82",
           "request": {
             "method": "POST",
             "header": [
@@ -1153,7 +1169,6 @@
           ]
         },
         {
-          "_postman_id": "2500852-244314fe-b6ae-487e-9068-0a97ad8070c7",
           "name": "get all airdrops",
           "event": [
             {
@@ -1209,6 +1224,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-244314fe-b6ae-487e-9068-0a97ad8070c7",
           "request": {
             "method": "GET",
             "header": [
@@ -1249,13 +1265,11 @@
                 {
                   "key": "filter",
                   "value": "{status: 'created'}",
-                  "equals": true,
                   "disabled": true
                 },
                 {
                   "key": "status",
-                  "value": "active",
-                  "equals": true
+                  "value": "active"
                 }
               ]
             },
@@ -1468,8 +1482,8 @@
           ]
         },
         {
-          "_postman_id": "2500852-24fdd62c-5c7c-47ca-96a0-e707ec2ea146",
           "name": "upsert airdrop ADMIN",
+          "_postman_id": "2500852-24fdd62c-5c7c-47ca-96a0-e707ec2ea146",
           "request": {
             "method": "PUT",
             "header": [
@@ -1495,8 +1509,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-05e17e8b-1fe1-4e40-8b7b-77e053f73470",
           "name": "get all aidrops",
+          "_postman_id": "2500852-05e17e8b-1fe1-4e40-8b7b-77e053f73470",
           "request": {
             "method": "GET",
             "header": [
@@ -1509,13 +1523,15 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/airdrops"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-b32746aa-9b67-407d-810a-288fe88650f6",
           "name": "create airdrop ADMIN",
           "event": [
             {
@@ -1571,6 +1587,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-b32746aa-9b67-407d-810a-288fe88650f6",
           "request": {
             "method": "POST",
             "header": [
@@ -1601,6 +1618,8 @@
           "response": []
         }
       ],
+      "_postman_id": "2500852-ea72f464-f6e8-437d-afb4-c2440843a443",
+      "description": "Folder for users",
       "event": [
         {
           "listen": "prerequest",
@@ -1625,12 +1644,9 @@
       ]
     },
     {
-      "_postman_id": "2500852-aac40470-c26c-41e5-9875-6d89d6422a54",
       "name": "activities",
-      "description": "Folder for users",
       "item": [
         {
-          "_postman_id": "2500852-f183ddf8-6b8f-45cc-b8b8-7142f396f741",
           "name": "create activity",
           "event": [
             {
@@ -1686,6 +1702,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-f183ddf8-6b8f-45cc-b8b8-7142f396f741",
           "request": {
             "method": "POST",
             "header": [
@@ -1920,8 +1937,8 @@
           ]
         },
         {
-          "_postman_id": "2500852-a17323a1-a495-41af-ad92-48c776d3cf50",
           "name": "update activity",
+          "_postman_id": "2500852-a17323a1-a495-41af-ad92-48c776d3cf50",
           "request": {
             "method": "PUT",
             "header": [
@@ -1947,8 +1964,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-c748aa5b-a968-498a-9239-1d1a14a7d8ee",
           "name": "get activity",
+          "_postman_id": "2500852-c748aa5b-a968-498a-9239-1d1a14a7d8ee",
           "request": {
             "method": "GET",
             "header": [
@@ -1974,8 +1991,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-0eb03d08-4ecc-4142-b4f5-0fd1ef5224ae",
           "name": "list activities",
+          "_postman_id": "2500852-0eb03d08-4ecc-4142-b4f5-0fd1ef5224ae",
           "request": {
             "method": "GET",
             "header": [
@@ -1996,7 +2013,10 @@
                 "value": "{{userId}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{domain}}:{{port}}/v1/woocoin/activities?userId={{userId}}",
               "protocol": "https",
@@ -2012,8 +2032,7 @@
               "query": [
                 {
                   "key": "userId",
-                  "value": "{{userId}}",
-                  "equals": true
+                  "value": "{{userId}}"
                 }
               ]
             }
@@ -2021,6 +2040,8 @@
           "response": []
         }
       ],
+      "_postman_id": "2500852-aac40470-c26c-41e5-9875-6d89d6422a54",
+      "description": "Folder for users",
       "event": [
         {
           "listen": "prerequest",
@@ -2045,12 +2066,9 @@
       ]
     },
     {
-      "_postman_id": "2500852-8572113c-4309-4e4d-930b-1295d28c913b",
       "name": "$model$",
-      "description": "Folder for users",
       "item": [
         {
-          "_postman_id": "2500852-04cdcfc2-64be-41c4-8386-411f2fa02b3a",
           "name": "post test",
           "event": [
             {
@@ -2106,6 +2124,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-04cdcfc2-64be-41c4-8386-411f2fa02b3a",
           "request": {
             "method": "POST",
             "header": [
@@ -2336,7 +2355,6 @@
           ]
         },
         {
-          "_postman_id": "2500852-9c2f78d0-2f6e-4a50-8d6e-5005341754e9",
           "name": "put",
           "event": [
             {
@@ -2407,6 +2425,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-9c2f78d0-2f6e-4a50-8d6e-5005341754e9",
           "request": {
             "method": "PUT",
             "header": [
@@ -2637,8 +2656,8 @@
           ]
         },
         {
-          "_postman_id": "2500852-29662715-132e-4d81-913f-d9b4faed1685",
           "name": "get",
+          "_postman_id": "2500852-29662715-132e-4d81-913f-d9b4faed1685",
           "request": {
             "method": "GET",
             "header": [
@@ -2651,14 +2670,17 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/$model$"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-d78054fb-b09d-4900-be07-57dd0863d264",
           "name": "delete",
+          "_postman_id": "2500852-d78054fb-b09d-4900-be07-57dd0863d264",
           "request": {
             "method": "DELETE",
             "header": [
@@ -2675,12 +2697,17 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/$model$"
           },
           "response": []
         }
       ],
+      "_postman_id": "2500852-8572113c-4309-4e4d-930b-1295d28c913b",
+      "description": "Folder for users",
       "event": [
         {
           "listen": "prerequest",
@@ -2705,12 +2732,9 @@
       ]
     },
     {
-      "_postman_id": "2500852-862e4d1b-0ed8-4b5d-8ed6-423a9ff4af82",
       "name": "wallets",
-      "description": "Folder for users",
       "item": [
         {
-          "_postman_id": "2500852-afc29bc5-88c7-435b-8679-797232686910",
           "name": "create wallet record ADMIN",
           "event": [
             {
@@ -2766,6 +2790,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-afc29bc5-88c7-435b-8679-797232686910",
           "request": {
             "method": "POST",
             "header": [
@@ -2996,7 +3021,6 @@
           ]
         },
         {
-          "_postman_id": "2500852-bff8ec68-5b6e-45ee-bf75-e3773c913ebf",
           "name": "create (upsert) wallet",
           "event": [
             {
@@ -3067,6 +3091,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-bff8ec68-5b6e-45ee-bf75-e3773c913ebf",
           "request": {
             "method": "PUT",
             "header": [
@@ -3297,8 +3322,8 @@
           ]
         },
         {
-          "_postman_id": "2500852-cc7f3375-1674-4a03-8d87-8270b1526e28",
           "name": "get wallet",
+          "_postman_id": "2500852-cc7f3375-1674-4a03-8d87-8270b1526e28",
           "request": {
             "method": "GET",
             "header": [
@@ -3311,12 +3336,17 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/users/{{userId}}"
           },
           "response": []
         }
       ],
+      "_postman_id": "2500852-862e4d1b-0ed8-4b5d-8ed6-423a9ff4af82",
+      "description": "Folder for users",
       "event": [
         {
           "listen": "prerequest",
@@ -3341,13 +3371,11 @@
       ]
     },
     {
-      "_postman_id": "2500852-4ccddbcb-7ed0-4efa-aadd-26fc0c7926e4",
       "name": "rankings",
-      "description": "Folder for rankings",
       "item": [
         {
-          "_postman_id": "2500852-a986d7dc-1ea3-41b8-9e7f-783b29b298c5",
           "name": "",
+          "_postman_id": "2500852-a986d7dc-1ea3-41b8-9e7f-783b29b298c5",
           "request": {
             "method": "GET",
             "header": [
@@ -3364,7 +3392,10 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "http://api.paypal.com/v1/woocoin/rankings?limit=20&offset=0",
               "protocol": "http",
@@ -3392,16 +3423,16 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2500852-4ccddbcb-7ed0-4efa-aadd-26fc0c7926e4",
+      "description": "Folder for rankings"
     },
     {
-      "_postman_id": "2500852-e4e5ac29-4c8e-44c1-b705-87f3818ed97f",
       "name": "newsfeeds",
-      "description": "Folder for newsfeeds",
       "item": [
         {
-          "_postman_id": "2500852-ac7e3d26-37ac-409c-be7f-40ff5c939539",
           "name": "get all newsfeed",
+          "_postman_id": "2500852-ac7e3d26-37ac-409c-be7f-40ff5c939539",
           "request": {
             "method": "GET",
             "header": [
@@ -3418,7 +3449,10 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0&filters={\"userId\":\"vnmaniyar\", \"status\": [\"active\"]}",
               "protocol": "https",
@@ -3434,18 +3468,15 @@
               "query": [
                 {
                   "key": "limit",
-                  "value": "20",
-                  "equals": true
+                  "value": "20"
                 },
                 {
                   "key": "offset",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 },
                 {
                   "key": "filters",
-                  "value": "{\"userId\":\"vnmaniyar\", \"status\": [\"active\"]}",
-                  "equals": true
+                  "value": "{\"userId\":\"vnmaniyar\", \"status\": [\"active\"]}"
                 }
               ]
             }
@@ -3453,8 +3484,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-be9984ae-59a8-49b4-b090-ec88285e204b",
           "name": "get all newsfeed not flagged not deletec",
+          "_postman_id": "2500852-be9984ae-59a8-49b4-b090-ec88285e204b",
           "request": {
             "method": "GET",
             "header": [
@@ -3471,9 +3502,12 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
-              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?status={\"$nin\": [\"deleted\",\"flagged\"]}",
+              "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?status={\"$nin\": [\"deleted\",\"flagged\"]}\n",
               "protocol": "https",
               "host": [
                 "{{domain}}"
@@ -3487,8 +3521,7 @@
               "query": [
                 {
                   "key": "status",
-                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n",
-                  "equals": true
+                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n"
                 },
                 {
                   "key": "",
@@ -3502,8 +3535,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-64acfb5f-0190-40a5-b6df-7f69063f8fa1",
           "name": "get all user specific newsfeed not flagged not deletec Copy",
+          "_postman_id": "2500852-64acfb5f-0190-40a5-b6df-7f69063f8fa1",
           "request": {
             "method": "GET",
             "header": [
@@ -3520,7 +3553,10 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?status={\"$nin\": [\"deleted\",\"flagged\"]}\n&userId=chrichen",
               "protocol": "https",
@@ -3536,13 +3572,11 @@
               "query": [
                 {
                   "key": "status",
-                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n",
-                  "equals": true
+                  "value": "{\"$nin\": [\"deleted\",\"flagged\"]}\n"
                 },
                 {
                   "key": "userId",
-                  "value": "chrichen",
-                  "equals": true
+                  "value": "chrichen"
                 }
               ]
             }
@@ -3550,7 +3584,6 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-0a43f08a-22d1-4add-a673-1444f9aca359",
           "name": "create newsfeed",
           "event": [
             {
@@ -3571,6 +3604,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-0a43f08a-22d1-4add-a673-1444f9aca359",
           "request": {
             "method": "POST",
             "header": [
@@ -3600,8 +3634,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-0afedf07-07d9-4c1e-bae9-3454aba2d07b",
           "name": "Get NewsFeed By Id",
+          "_postman_id": "2500852-0afedf07-07d9-4c1e-bae9-3454aba2d07b",
           "request": {
             "method": "GET",
             "header": [
@@ -3618,14 +3652,17 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}.qa.paypal.com:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-be38178f-2cd4-40e1-b64d-5eab87c88d5e",
           "name": "update newsfeed",
+          "_postman_id": "2500852-be38178f-2cd4-40e1-b64d-5eab87c88d5e",
           "request": {
             "method": "PUT",
             "header": [
@@ -3647,8 +3684,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-94e176ca-40b2-4194-8eb7-9e30330d6172",
           "name": "flag newsfeed",
+          "_postman_id": "2500852-94e176ca-40b2-4194-8eb7-9e30330d6172",
           "request": {
             "method": "POST",
             "header": [
@@ -3674,8 +3711,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-651499fa-b399-4e62-bec9-2ab670ac56cb",
           "name": "resolve flagged newsfeed delete",
+          "_postman_id": "2500852-651499fa-b399-4e62-bec9-2ab670ac56cb",
           "request": {
             "method": "PUT",
             "header": [
@@ -3705,8 +3742,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-9656a958-e9c2-4dec-9070-50ca4adfd28d",
           "name": "resolve flagged newsfeed dismiss",
+          "_postman_id": "2500852-9656a958-e9c2-4dec-9070-50ca4adfd28d",
           "request": {
             "method": "PUT",
             "header": [
@@ -3736,8 +3773,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-77b544fa-49b5-45e8-a18a-f5af6fb88ce6",
           "name": "like newsfeed",
+          "_postman_id": "2500852-77b544fa-49b5-45e8-a18a-f5af6fb88ce6",
           "request": {
             "method": "PUT",
             "header": [
@@ -3754,22 +3791,25 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds/{{newsfeedId}}/like",
             "description": "Like or unlike a newsfeed event"
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2500852-e4e5ac29-4c8e-44c1-b705-87f3818ed97f",
+      "description": "Folder for newsfeeds"
     },
     {
-      "_postman_id": "2500852-64ab2d1b-cc0c-451c-af98-0103e99cee73",
       "name": "flagged",
-      "description": "Folder for newsfeeds",
       "item": [
         {
-          "_postman_id": "2500852-d0d6c5a9-fbb2-454a-81fc-93a51afea12a",
           "name": "create flagged",
+          "_postman_id": "2500852-d0d6c5a9-fbb2-454a-81fc-93a51afea12a",
           "request": {
             "method": "POST",
             "header": [
@@ -3791,8 +3831,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-486e45d3-e1ae-4ffe-9b4b-a0b038d962a5",
           "name": "get all flagged",
+          "_postman_id": "2500852-486e45d3-e1ae-4ffe-9b4b-a0b038d962a5",
           "request": {
             "method": "GET",
             "header": [
@@ -3818,8 +3858,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-fee1ad10-4dea-4a2d-b7b8-5c8535050f5b",
           "name": "update flagged",
+          "_postman_id": "2500852-fee1ad10-4dea-4a2d-b7b8-5c8535050f5b",
           "request": {
             "method": "PUT",
             "header": [
@@ -3845,8 +3885,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-77dc2b8e-a763-48b2-b2f4-8649597af955",
           "name": "get all newsfeed",
+          "_postman_id": "2500852-77dc2b8e-a763-48b2-b2f4-8649597af955",
           "request": {
             "method": "GET",
             "header": [
@@ -3863,7 +3903,10 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{domain}}:{{port}}/v1/woocoin/newsfeeds?limit=20&offset=0",
               "protocol": "https",
@@ -3879,29 +3922,27 @@
               "query": [
                 {
                   "key": "limit",
-                  "value": "20",
-                  "equals": true
+                  "value": "20"
                 },
                 {
                   "key": "offset",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 }
               ]
             }
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2500852-64ab2d1b-cc0c-451c-af98-0103e99cee73",
+      "description": "Folder for newsfeeds"
     },
     {
-      "_postman_id": "2500852-fceb08a5-e4d1-4f36-a818-915a21f3763c",
       "name": "transfers",
-      "description": "Folder for transfers",
       "item": [
         {
-          "_postman_id": "2500852-e5eec010-2ec1-4bbd-a647-8e10ad254f85",
           "name": "",
+          "_postman_id": "2500852-e5eec010-2ec1-4bbd-a647-8e10ad254f85",
           "request": {
             "method": "GET",
             "header": [
@@ -3918,7 +3959,10 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "http://api.paypal.com/v1/woocoin/transfers?limit=20&offset=0",
               "protocol": "http",
@@ -3947,8 +3991,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-c9174868-dfff-4a2a-8381-c5cc26c85fef",
           "name": "create transfer idea submission",
+          "_postman_id": "2500852-c9174868-dfff-4a2a-8381-c5cc26c85fef",
           "request": {
             "method": "POST",
             "header": [
@@ -3974,8 +4018,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-9095ebe8-3d8e-4951-aa9e-2c78788f4525",
           "name": "create transfer p2p",
+          "_postman_id": "2500852-9095ebe8-3d8e-4951-aa9e-2c78788f4525",
           "request": {
             "method": "POST",
             "header": [
@@ -4001,8 +4045,11 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-0f680ade-d6aa-482c-bb1e-24d7a4819216",
           "name": "create transfer earn",
+          "_postman_id": "2500852-0f680ade-d6aa-482c-bb1e-24d7a4819216",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
@@ -4028,8 +4075,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-cf577f8c-b8a4-4ea5-bc46-2e4680bd4ce7",
           "name": "",
+          "_postman_id": "2500852-cf577f8c-b8a4-4ea5-bc46-2e4680bd4ce7",
           "request": {
             "method": "GET",
             "header": [
@@ -4046,7 +4093,10 @@
                 "value": "{{x-paypal-user-id}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "http://api.paypal.com/v1/woocoin/transfers/:transferId",
               "protocol": "http",
@@ -4064,7 +4114,8 @@
               "variable": [
                 {
                   "key": "transferId",
-                  "value": "{{transferId}}"
+                  "value": "{{transferId}}",
+                  "type": "string"
                 }
               ]
             }
@@ -4072,8 +4123,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-21fbdd8a-61e8-41d6-843b-039ca5c6fa74",
           "name": "create transfer idea submission Copy",
+          "_postman_id": "2500852-21fbdd8a-61e8-41d6-843b-039ca5c6fa74",
           "request": {
             "method": "POST",
             "header": [
@@ -4099,8 +4150,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-a5ec288e-4c56-48f9-8a98-05e7e2f956da",
           "name": "create transfer 2018 booth",
+          "_postman_id": "2500852-a5ec288e-4c56-48f9-8a98-05e7e2f956da",
           "request": {
             "method": "POST",
             "header": [
@@ -4126,8 +4177,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-0f6106ba-031b-4918-ad0e-4ce4b4fa5076",
           "name": "create transfer 2018 booth Copy",
+          "_postman_id": "2500852-0f6106ba-031b-4918-ad0e-4ce4b4fa5076",
           "request": {
             "method": "POST",
             "header": [
@@ -4152,15 +4203,14 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2500852-fceb08a5-e4d1-4f36-a818-915a21f3763c",
+      "description": "Folder for transfers"
     },
     {
-      "_postman_id": "2500852-d2a79047-f6ae-4e35-8dca-9f9dfd0c6035",
       "name": "rewards",
-      "description": "Folder for experiences",
       "item": [
         {
-          "_postman_id": "2500852-eb80ff3a-538d-4a6a-a9d4-2a974a12602c",
           "name": "create reward",
           "event": [
             {
@@ -4204,6 +4254,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-eb80ff3a-538d-4a6a-a9d4-2a974a12602c",
           "request": {
             "method": "POST",
             "header": [
@@ -4229,7 +4280,6 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-fbb69909-5b9e-41e6-bfdf-b0bdb1c572ab",
           "name": "get all rewards",
           "event": [
             {
@@ -4245,6 +4295,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-fbb69909-5b9e-41e6-bfdf-b0bdb1c572ab",
           "request": {
             "method": "GET",
             "header": [
@@ -4261,7 +4312,10 @@
                 "value": "testPB"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{domain}}:{{port}}/v1/woocoin/rewards?limit=20&offset=0&filter={\"status\":\"inStock\"}&orderBy={\"name\":1}",
               "protocol": "https",
@@ -4277,23 +4331,19 @@
               "query": [
                 {
                   "key": "limit",
-                  "value": "20",
-                  "equals": true
+                  "value": "20"
                 },
                 {
                   "key": "offset",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 },
                 {
                   "key": "filter",
-                  "value": "{\"status\":\"inStock\"}",
-                  "equals": true
+                  "value": "{\"status\":\"inStock\"}"
                 },
                 {
                   "key": "orderBy",
-                  "value": "{\"name\":1}",
-                  "equals": true
+                  "value": "{\"name\":1}"
                 }
               ]
             }
@@ -4301,8 +4351,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-d1da75f0-8569-461c-8abe-97464b189729",
           "name": "get reward",
+          "_postman_id": "2500852-d1da75f0-8569-461c-8abe-97464b189729",
           "request": {
             "method": "GET",
             "header": [
@@ -4324,7 +4374,6 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-1b51a7fc-44ac-465b-b484-d6816cd0c73e",
           "name": "update reward",
           "event": [
             {
@@ -4340,6 +4389,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-1b51a7fc-44ac-465b-b484-d6816cd0c73e",
           "request": {
             "method": "PUT",
             "header": [
@@ -4360,16 +4410,16 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2500852-d2a79047-f6ae-4e35-8dca-9f9dfd0c6035",
+      "description": "Folder for experiences"
     },
     {
-      "_postman_id": "2500852-78f982de-2597-42d1-8c73-6b149af8b192",
       "name": "downstream",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2500852-bce94c5b-7890-415c-bd23-4a0d938e2102",
           "name": "bridge api",
+          "_postman_id": "2500852-bce94c5b-7890-415c-bd23-4a0d938e2102",
           "request": {
             "method": "GET",
             "header": [
@@ -4382,14 +4432,17 @@
                 "value": ""
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://bridge.paypalcorp.com/searchsvc/profile/orghierarchy/knguyen1"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-33a06b52-45c6-4c88-b127-242e6a87bb5d",
           "name": "bridge api Copy",
+          "_postman_id": "2500852-33a06b52-45c6-4c88-b127-242e6a87bb5d",
           "request": {
             "method": "GET",
             "header": [
@@ -4402,20 +4455,21 @@
                 "value": ""
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://bridge.paypalcorp.com/searchsvc/profile/orghierarchy/knguyen1"
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2500852-78f982de-2597-42d1-8c73-6b149af8b192"
     },
     {
-      "_postman_id": "2500852-47b495e0-6898-49dd-8f78-95b09651270a",
       "name": "redemptions",
-      "description": "",
       "item": [
         {
-          "_postman_id": "2500852-4fab7a0f-f714-4d45-b667-51fa0cc09014",
           "name": "redeeem reward",
           "event": [
             {
@@ -4443,6 +4497,7 @@
               }
             }
           ],
+          "_postman_id": "2500852-4fab7a0f-f714-4d45-b667-51fa0cc09014",
           "request": {
             "method": "POST",
             "header": [
@@ -4469,8 +4524,8 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-5b6165de-bd0b-40fa-a9ef-1cc3491371da",
           "name": "get all redemptions",
+          "_postman_id": "2500852-5b6165de-bd0b-40fa-a9ef-1cc3491371da",
           "request": {
             "method": "GET",
             "header": [
@@ -4506,23 +4561,19 @@
               "query": [
                 {
                   "key": "limit",
-                  "value": "20",
-                  "equals": true
+                  "value": "20"
                 },
                 {
                   "key": "offset",
-                  "value": "0",
-                  "equals": true
+                  "value": "0"
                 },
                 {
                   "key": "filter",
-                  "value": "{\"status\":\"created\"}",
-                  "equals": true
+                  "value": "{\"status\":\"created\"}"
                 },
                 {
                   "key": "orderBy",
-                  "value": "{\"name\":1}",
-                  "equals": true
+                  "value": "{\"name\":1}"
                 }
               ]
             },
@@ -4531,19 +4582,22 @@
           "response": []
         },
         {
-          "_postman_id": "2500852-70ef8a12-73cd-4724-93f7-e836c4dc85a6",
           "name": "get redemption",
+          "_postman_id": "2500852-70ef8a12-73cd-4724-93f7-e836c4dc85a6",
           "request": {
             "method": "GET",
             "header": [],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{domain}}:{{port}}/v1/woocoin/redemptions/{{redemptionId}}"
           },
           "response": []
         },
         {
-          "_postman_id": "2500852-11b0386c-c7ee-4366-a292-9ac7447090b7",
           "name": "update redemption",
+          "_postman_id": "2500852-11b0386c-c7ee-4366-a292-9ac7447090b7",
           "request": {
             "method": "PUT",
             "header": [
@@ -4564,7 +4618,8 @@
           },
           "response": []
         }
-      ]
+      ],
+      "_postman_id": "2500852-47b495e0-6898-49dd-8f78-95b09651270a"
     }
   ],
   "event": [
@@ -4591,11 +4646,10 @@
   ],
   "variable": [
     {
-      "id": "990a15a9-7a5d-40ea-814f-06c43b366363",
+      "id": "69ff07d7-3d1c-4d75-bba9-0b2fa4ff6e45",
       "key": "userId",
       "value": "chrichen",
-      "type": "string",
-      "description": ""
+      "type": "string"
     }
   ]
 }

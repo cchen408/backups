@@ -2496,7 +2496,7 @@
     "createairdropADMINRequest": {
       "title": "createairdropADMINRequest",
       "example": {
-        "id": "testAirdrop293",
+        "id": "testAirdrop175",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2527,7 +2527,7 @@
     "createairdropADMINRequest1": {
       "title": "createairdropADMINRequest1",
       "example": {
-        "name": "test - af1d5789-df6b-4e53-873a-c8f5639b9430",
+        "name": "test - abc07020-16e9-4da5-a1b8-198ac22c1ecc",
         "description": "test airdrop",
         "amount": 100,
         "status": "complete"
@@ -2677,7 +2677,7 @@
         "amount": 100,
         "type": "p2p",
         "note": "thanks for helping me carry stuff to the car",
-        "transactionHash": "08492656-5153-4d33-afff-ba678c19b5b0",
+        "transactionHash": "4ac06147-1e3d-4831-89ec-e704f5703225",
         "metadata": {
           "ideaTitle": "LiFi Radar Image Recognition",
           "ideaDisclosureNumber": "D2018-2134"

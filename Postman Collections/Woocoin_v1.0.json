@@ -1178,7 +1178,7 @@
     "/rankings": {
       "get": {
         "description": "TODO: Add Description",
-        "summary": "Rankings_GET",
+        "summary": "Request",
         "tags": [
           "rankings"
         ],
@@ -1778,7 +1778,7 @@
     "/transfers": {
       "get": {
         "description": "TODO: Add Description",
-        "summary": "Transfers_GET",
+        "summary": "Request",
         "tags": [
           "transfers"
         ],
@@ -1887,7 +1887,7 @@
     "/transfers/{transferId}": {
       "get": {
         "description": "TODO: Add Description",
-        "summary": "TransfersByTransferId_GET",
+        "summary": "Request",
         "tags": [
           "transfers"
         ],
@@ -2496,7 +2496,7 @@
     "createairdropADMINRequest": {
       "title": "createairdropADMINRequest",
       "example": {
-        "id": "testAirdrop83",
+        "id": "testAirdrop14",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2527,7 +2527,7 @@
     "createairdropADMINRequest1": {
       "title": "createairdropADMINRequest1",
       "example": {
-        "name": "test - 77435b25-dd9c-4a0a-a1c2-72cf4954732d",
+        "name": "test - f3131a4c-4779-4f2e-b168-153223275dcc",
         "description": "test airdrop",
         "amount": 100,
         "status": "complete"
@@ -2677,7 +2677,7 @@
         "amount": 100,
         "type": "p2p",
         "note": "thanks for helping me carry stuff to the car",
-        "transactionHash": "245645d3-7714-4d28-99af-5a968be346cf",
+        "transactionHash": "abfdc841-f1c8-435d-8629-d0df02f51b70",
         "metadata": {
           "ideaTitle": "LiFi Radar Image Recognition",
           "ideaDisclosureNumber": "D2018-2134"

@@ -77,7 +77,7 @@
 </header>
 <section class="form-wrapper flex flex-col">
 
-<form action="/account/login?ReturnUrl=%2Fapi%2Ftransform%3Fformat%3Dswagger20%26apikey%3DmONZg6E9hVHp7-WXsHucCGl-lXLvzN0t9GGEQ_s1xgrILHdXq_d50wEd8ptizzQN" id="loginForm" method="post" novalidate="True" role="form"><input name="__RequestVerificationToken" type="hidden" value="zlEMmvKXWYsLtqocrBoZ7WcbJVK-5-vwBR-Bv9T_izKRXDVSsfnIMaH9V6n68sgb-j5DPd3anUqNXIcr0FTIEVMQa0-hh0wjWxJ6d3MJ0mc1" /><div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+<form action="/account/login?ReturnUrl=%2Fapi%2Ftransform%3Fformat%3Dswagger20%26apikey%3DmONZg6E9hVHp7-WXsHucCGl-lXLvzN0t9GGEQ_s1xgrILHdXq_d50wEd8ptizzQN" id="loginForm" method="post" novalidate="True" role="form"><input name="__RequestVerificationToken" type="hidden" value="n5SoqNWtbmdN7YRnF0oa_Eo_v3IwEfYmnZgBXuGWM8qMLx1_aS-1oQ_sMaZPjzsibS5eBhXpQFC6hyCA53lq8rafwF8Fvh3pSrpyH5BfB_A1" /><div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
 </ul></div>        <div class="form-group">
             <label class="mb-1" for="signInInputEmail1">
                 Email

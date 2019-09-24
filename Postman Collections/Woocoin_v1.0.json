@@ -2496,7 +2496,7 @@
     "createairdropADMINRequest": {
       "title": "createairdropADMINRequest",
       "example": {
-        "id": "testAirdrop528",
+        "id": "testAirdrop227",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2527,7 +2527,7 @@
     "createairdropADMINRequest1": {
       "title": "createairdropADMINRequest1",
       "example": {
-        "name": "test - a213af86-7867-40a4-99dd-c92218a34dd2",
+        "name": "test - f5dd44b0-c688-4106-88fe-ddba385a8146",
         "description": "test airdrop",
         "amount": 100,
         "status": "complete"
@@ -2677,7 +2677,7 @@
         "amount": 100,
         "type": "p2p",
         "note": "thanks for helping me carry stuff to the car",
-        "transactionHash": "9a01fb5d-1d52-49bc-ba56-08a2a5e90d3a",
+        "transactionHash": "00392e49-7a94-4168-83ea-e2572e061a75",
         "metadata": {
           "ideaTitle": "LiFi Radar Image Recognition",
           "ideaDisclosureNumber": "D2018-2134"
@@ -3083,6 +3083,53 @@
       },
       "required": [
         "booth"
+      ]
+    },
+    "createtransfer2018boothCopyRequest": {
+      "title": "createtransfer2018boothCopyRequest",
+      "example": {
+        "from": "god",
+        "to": [
+          "chrichen"
+        ],
+        "type": "expo",
+        "subtype": "2018",
+        "note": "if the booth wants a subtitle they can put it here",
+        "metadata": {
+          "booth": "Test Booth"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "from": {
+          "type": "string"
+        },
+        "to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "type": {
+          "type": "string"
+        },
+        "subtype": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "metadata": {
+          "$ref": "#/definitions/Metadata2"
+        }
+      },
+      "required": [
+        "from",
+        "to",
+        "type",
+        "subtype",
+        "note",
+        "metadata"
       ]
     },
     "createrewardrequest": {

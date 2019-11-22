@@ -26,7 +26,7 @@
         "tags": [
           "users"
         ],
-        "operationId": "UsersPut",
+        "operationId": "createuserADMIN",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -91,7 +91,7 @@
         "tags": [
           "users"
         ],
-        "operationId": "UsersGet",
+        "operationId": "listusers",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -134,7 +134,7 @@
         "tags": [
           "users"
         ],
-        "operationId": "UsersChrichenPut",
+        "operationId": "create(upsert)user",
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
@@ -224,7 +224,7 @@
         "tags": [
           "users"
         ],
-        "operationId": "UsersChrichenGet",
+        "operationId": "getuser",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -267,7 +267,7 @@
         "tags": [
           "users"
         ],
-        "operationId": "UsersChrichenActivatePut",
+        "operationId": "activateuser",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -310,7 +310,7 @@
         "tags": [
           "users"
         ],
-        "operationId": "UsersRefreshPost",
+        "operationId": "refreshusers",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -353,7 +353,7 @@
         "tags": [
           "webmethods"
         ],
-        "operationId": "WebmethodsByUidGet",
+        "operationId": "getwebmethoduserbyuid",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -403,7 +403,7 @@
         "tags": [
           "webmethods"
         ],
-        "operationId": "WebmethodsGet",
+        "operationId": "getallwebmethodusers",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -453,7 +453,7 @@
         "tags": [
           "airdrops"
         ],
-        "operationId": "AirdropsPost",
+        "operationId": "createairdropADMIN",
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
@@ -552,7 +552,7 @@
         "tags": [
           "airdrops"
         ],
-        "operationId": "AirdropsGet",
+        "operationId": "getallairdrops",
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
@@ -651,7 +651,7 @@
         "tags": [
           "airdrops"
         ],
-        "operationId": "ActivitiesPost",
+        "operationId": "createairdropADMIN1",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -708,7 +708,7 @@
         "tags": [
           "activities"
         ],
-        "operationId": "ActivitiesGet",
+        "operationId": "listactivities",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -765,7 +765,7 @@
         "tags": [
           "activities"
         ],
-        "operationId": "ActivitiesByActivityIdPut",
+        "operationId": "updateactivity",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -813,7 +813,7 @@
         "tags": [
           "activities"
         ],
-        "operationId": "ActivitiesByActivityIdGet",
+        "operationId": "getactivity",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -863,7 +863,7 @@
         "tags": [
           "$model$"
         ],
-        "operationId": "ModelPost",
+        "operationId": "posttest",
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
@@ -955,7 +955,7 @@
         "tags": [
           "$model$"
         ],
-        "operationId": "ModelPut",
+        "operationId": "put",
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
@@ -1038,7 +1038,7 @@
         "tags": [
           "$model$"
         ],
-        "operationId": "ModelGet",
+        "operationId": "get",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1072,7 +1072,7 @@
         "tags": [
           "$model$"
         ],
-        "operationId": "ModelDelete",
+        "operationId": "delete",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1115,7 +1115,7 @@
         "tags": [
           "wallets"
         ],
-        "operationId": "WalletsPost",
+        "operationId": "createwalletrecordADMIN",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1182,7 +1182,7 @@
         "tags": [
           "rankings"
         ],
-        "operationId": "RankingsGet",
+        "operationId": "Request",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1241,7 +1241,7 @@
         "tags": [
           "newsfeeds"
         ],
-        "operationId": "NewsfeedsGet",
+        "operationId": "getallnewsfeed",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1305,7 +1305,7 @@
         "tags": [
           "newsfeeds"
         ],
-        "operationId": "NewsfeedsPost",
+        "operationId": "createnewsfeed",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1364,7 +1364,7 @@
         "tags": [
           "newsfeeds"
         ],
-        "operationId": "NewsfeedsByNewsfeedIdGet",
+        "operationId": "GetNewsFeedById",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1412,7 +1412,7 @@
         "tags": [
           "newsfeeds"
         ],
-        "operationId": "NewsfeedsByNewsfeedIdPut",
+        "operationId": "updatenewsfeed",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1464,7 +1464,7 @@
         "tags": [
           "newsfeeds"
         ],
-        "operationId": "NewsfeedsFlagByNewsfeedIdPost",
+        "operationId": "flagnewsfeed",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1521,7 +1521,7 @@
         "tags": [
           "newsfeeds"
         ],
-        "operationId": "NewsfeedsFlagByNewsfeedIdPut",
+        "operationId": "resolveflaggednewsfeeddelete",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1587,7 +1587,7 @@
         "tags": [
           "newsfeeds"
         ],
-        "operationId": "NewsfeedsLikeByNewsfeedIdPut",
+        "operationId": "likenewsfeed",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1637,7 +1637,7 @@
         "tags": [
           "flagged"
         ],
-        "operationId": "FlaggedPost",
+        "operationId": "createflagged",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1680,7 +1680,7 @@
         "tags": [
           "flagged"
         ],
-        "operationId": "FlaggedGet",
+        "operationId": "getallflagged",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1723,7 +1723,7 @@
         "tags": [
           "flagged"
         ],
-        "operationId": "FlaggedByFlaggedIdPut",
+        "operationId": "updateflagged",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1782,7 +1782,7 @@
         "tags": [
           "transfers"
         ],
-        "operationId": "TransfersGet",
+        "operationId": "GetRequest",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1839,7 +1839,7 @@
         "tags": [
           "transfers"
         ],
-        "operationId": "TransfersPost",
+        "operationId": "createtransferideasubmission",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1891,7 +1891,7 @@
         "tags": [
           "transfers"
         ],
-        "operationId": "TransfersByTransferIdGet",
+        "operationId": "GetRequest1",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1941,7 +1941,7 @@
         "tags": [
           "rewards"
         ],
-        "operationId": "RewardsPost",
+        "operationId": "createreward",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -1991,7 +1991,7 @@
         "tags": [
           "rewards"
         ],
-        "operationId": "RewardsGet",
+        "operationId": "getallrewards",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2064,7 +2064,7 @@
         "tags": [
           "rewards"
         ],
-        "operationId": "RewardsByRewardIdGet",
+        "operationId": "getreward",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2105,7 +2105,7 @@
         "tags": [
           "rewards"
         ],
-        "operationId": "RewardsByRewardIdPut",
+        "operationId": "updatereward",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2157,7 +2157,7 @@
         "tags": [
           "downstream"
         ],
-        "operationId": "Knguyen1Get",
+        "operationId": "bridgeapi",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2186,7 +2186,7 @@
         "tags": [
           "redemptions"
         ],
-        "operationId": "RedemptionsPost",
+        "operationId": "redeeemreward",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2236,7 +2236,7 @@
         "tags": [
           "redemptions"
         ],
-        "operationId": "RedemptionsGet",
+        "operationId": "getallredemptions",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2309,7 +2309,7 @@
         "tags": [
           "redemptions"
         ],
-        "operationId": "RedemptionsByRedemptionIdGet",
+        "operationId": "getredemption",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2336,7 +2336,7 @@
         "tags": [
           "redemptions"
         ],
-        "operationId": "RedemptionsByRedemptionIdPut",
+        "operationId": "updateredemption",
         "deprecated": false,
         "produces": [
           "application/json"
@@ -2496,7 +2496,7 @@
     "createairdropADMINRequest": {
       "title": "createairdropADMINRequest",
       "example": {
-        "id": "testAirdrop478",
+        "id": "testAirdrop185",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2527,7 +2527,7 @@
     "createairdropADMINRequest1": {
       "title": "createairdropADMINRequest1",
       "example": {
-        "name": "test - a8f9c13a-e527-4680-89ba-162bfa502e4e",
+        "name": "test - 053a5291-6934-4ca7-b809-6af1da447d18",
         "description": "test airdrop",
         "amount": 100,
         "status": "complete"
@@ -2677,7 +2677,7 @@
         "amount": 100,
         "type": "p2p",
         "note": "thanks for helping me carry stuff to the car",
-        "transactionHash": "1660d977-bba4-43bd-88ab-4b1e69dc09a4",
+        "transactionHash": "ec98953d-ed85-4224-9cf3-65fe5dc26365",
         "metadata": {
           "ideaTitle": "LiFi Radar Image Recognition",
           "ideaDisclosureNumber": "D2018-2134"

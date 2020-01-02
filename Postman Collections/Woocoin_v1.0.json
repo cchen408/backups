@@ -86,7 +86,6 @@
         }
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "list users",
         "tags": [
           "users"
@@ -219,7 +218,6 @@
         }
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get user",
         "tags": [
           "users"
@@ -262,7 +260,6 @@
     },
     "/users/chrichen/activate": {
       "put": {
-        "description": "TODO: Add Description",
         "summary": "activate user",
         "tags": [
           "users"
@@ -305,7 +302,6 @@
     },
     "/users/refresh": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "refresh users",
         "tags": [
           "users"
@@ -348,7 +344,6 @@
     },
     "/webmethods/{uid}": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get webmethod user by uid",
         "tags": [
           "webmethods"
@@ -398,7 +393,6 @@
     },
     "/webmethods": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get all webmethod users",
         "tags": [
           "webmethods"
@@ -703,7 +697,6 @@
         }
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "list activities",
         "tags": [
           "activities"
@@ -760,7 +753,6 @@
     },
     "/activities/{activityId}": {
       "put": {
-        "description": "TODO: Add Description",
         "summary": "update activity",
         "tags": [
           "activities"
@@ -808,7 +800,6 @@
         }
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get activity",
         "tags": [
           "activities"
@@ -1033,7 +1024,6 @@
         }
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get",
         "tags": [
           "$model$"
@@ -1067,7 +1057,6 @@
         }
       },
       "delete": {
-        "description": "TODO: Add Description",
         "summary": "delete",
         "tags": [
           "$model$"
@@ -1177,7 +1166,6 @@
     },
     "/rankings": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "Request",
         "tags": [
           "rankings"
@@ -1236,7 +1224,6 @@
     },
     "/newsfeeds": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get all newsfeed",
         "tags": [
           "newsfeeds"
@@ -1300,7 +1287,6 @@
         }
       },
       "post": {
-        "description": "TODO: Add Description",
         "summary": "create newsfeed",
         "tags": [
           "newsfeeds"
@@ -1359,7 +1345,6 @@
     },
     "/newsfeeds/{newsfeedId}": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "Get NewsFeed By Id",
         "tags": [
           "newsfeeds"
@@ -1407,7 +1392,6 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
         "summary": "update newsfeed",
         "tags": [
           "newsfeeds"
@@ -1459,7 +1443,6 @@
     },
     "/newsfeeds/{newsfeedId}/flag": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "flag newsfeed",
         "tags": [
           "newsfeeds"
@@ -1516,7 +1499,6 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
         "summary": "resolve flagged newsfeed delete",
         "tags": [
           "newsfeeds"
@@ -1632,7 +1614,6 @@
     },
     "/flagged": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "create flagged",
         "tags": [
           "flagged"
@@ -1675,7 +1656,6 @@
         }
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get all flagged",
         "tags": [
           "flagged"
@@ -1718,7 +1698,6 @@
     },
     "/flagged/{flaggedId}": {
       "put": {
-        "description": "TODO: Add Description",
         "summary": "update flagged",
         "tags": [
           "flagged"
@@ -1777,7 +1756,6 @@
     },
     "/transfers": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "Request",
         "tags": [
           "transfers"
@@ -1834,7 +1812,6 @@
         }
       },
       "post": {
-        "description": "TODO: Add Description",
         "summary": "create transfer idea submission",
         "tags": [
           "transfers"
@@ -1886,7 +1863,6 @@
     },
     "/transfers/{transferId}": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "Request",
         "tags": [
           "transfers"
@@ -1936,7 +1912,6 @@
     },
     "/rewards": {
       "post": {
-        "description": "TODO: Add Description",
         "summary": "create reward",
         "tags": [
           "rewards"
@@ -1986,7 +1961,6 @@
         }
       },
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get all rewards",
         "tags": [
           "rewards"
@@ -2059,7 +2033,6 @@
     },
     "/rewards/{rewardId}": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get reward",
         "tags": [
           "rewards"
@@ -2100,7 +2073,6 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
         "summary": "update reward",
         "tags": [
           "rewards"
@@ -2152,7 +2124,6 @@
     },
     "/knguyen1": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "bridge api",
         "tags": [
           "downstream"
@@ -2304,7 +2275,6 @@
     },
     "/redemptions/{redemptionId}": {
       "get": {
-        "description": "TODO: Add Description",
         "summary": "get redemption",
         "tags": [
           "redemptions"
@@ -2331,7 +2301,6 @@
         }
       },
       "put": {
-        "description": "TODO: Add Description",
         "summary": "update redemption",
         "tags": [
           "redemptions"
@@ -2496,7 +2465,7 @@
     "createairdropADMINRequest": {
       "title": "createairdropADMINRequest",
       "example": {
-        "id": "testAirdrop492",
+        "id": "testAirdrop228",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2527,7 +2496,7 @@
     "createairdropADMINRequest1": {
       "title": "createairdropADMINRequest1",
       "example": {
-        "name": "test - f229705c-255c-4e1f-b56e-98c07dc5d55c",
+        "name": "test - 138ba90e-e41a-461c-9807-8f1d24e5f2c6",
         "description": "test airdrop",
         "amount": 100,
         "status": "complete"
@@ -2677,7 +2646,7 @@
         "amount": 100,
         "type": "p2p",
         "note": "thanks for helping me carry stuff to the car",
-        "transactionHash": "943350a7-4ab2-4f80-b057-18852f7d9b65",
+        "transactionHash": "3b37558a-b42a-4af6-81bc-4053f9d2df36",
         "metadata": {
           "ideaTitle": "LiFi Radar Image Recognition",
           "ideaDisclosureNumber": "D2018-2134"

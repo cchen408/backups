@@ -31,6 +31,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -95,6 +98,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -137,6 +143,9 @@
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
+        ],
+        "consumes": [
+          "application/json"
         ],
         "parameters": [
           {
@@ -227,6 +236,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -267,6 +279,9 @@
         "operationId": "activateuser",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -311,6 +326,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -351,6 +369,9 @@
         "operationId": "getwebmethoduserbyuid",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -402,6 +423,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -451,6 +475,9 @@
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
+        ],
+        "consumes": [
+          "application/json"
         ],
         "parameters": [
           {
@@ -551,6 +578,9 @@
         "produces": [
           "application/json; charset=utf-8"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "status",
@@ -650,6 +680,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -704,6 +737,9 @@
         "operationId": "listactivities",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -762,6 +798,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -807,6 +846,9 @@
         "operationId": "getactivity",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -858,6 +900,9 @@
         "deprecated": false,
         "produces": [
           "application/json; charset=utf-8"
+        ],
+        "consumes": [
+          "application/json"
         ],
         "parameters": [
           {
@@ -951,6 +996,9 @@
         "produces": [
           "application/json; charset=utf-8"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1033,6 +1081,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1064,6 +1115,9 @@
         "operationId": "delete",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1107,6 +1161,9 @@
         "operationId": "createwalletrecordADMIN",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1175,6 +1232,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "limit",
@@ -1231,6 +1291,9 @@
         "operationId": "getallnewsfeed",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1296,6 +1359,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1354,6 +1420,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1399,6 +1468,9 @@
         "operationId": "updatenewsfeed",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1450,6 +1522,9 @@
         "operationId": "flagnewsfeed",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1506,6 +1581,9 @@
         "operationId": "resolveflaggednewsfeeddelete",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1574,6 +1652,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1623,6 +1704,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1665,6 +1749,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1705,6 +1792,9 @@
         "operationId": "updateflagged",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -1765,6 +1855,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "limit",
@@ -1821,6 +1914,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1872,6 +1968,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "transferId",
@@ -1921,6 +2020,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -1968,6 +2070,9 @@
         "operationId": "getallrewards",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -2042,6 +2147,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Accept",
@@ -2080,6 +2188,9 @@
         "operationId": "updatereward",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -2133,6 +2244,9 @@
         "produces": [
           "application/json"
         ],
+        "consumes": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "Content-Type",
@@ -2160,6 +2274,9 @@
         "operationId": "redeeemreward",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -2210,6 +2327,9 @@
         "operationId": "getallredemptions",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -2308,6 +2428,9 @@
         "operationId": "updateredemption",
         "deprecated": false,
         "produces": [
+          "application/json"
+        ],
+        "consumes": [
           "application/json"
         ],
         "parameters": [
@@ -2465,7 +2588,7 @@
     "createairdropADMINRequest": {
       "title": "createairdropADMINRequest",
       "example": {
-        "id": "testAirdrop706",
+        "id": "testAirdrop44",
         "description": "test airdrop",
         "amount": 100,
         "status": "active"
@@ -2496,7 +2619,7 @@
     "createairdropADMINRequest1": {
       "title": "createairdropADMINRequest1",
       "example": {
-        "name": "test - ef43f7df-4d55-45c0-bf19-7e74d6a99d22",
+        "name": "test - 2ae8df02-7f9b-40c4-8649-cfc3778a2a95",
         "description": "test airdrop",
         "amount": 100,
         "status": "complete"
@@ -2646,7 +2769,7 @@
         "amount": 100,
         "type": "p2p",
         "note": "thanks for helping me carry stuff to the car",
-        "transactionHash": "ff229bd9-f998-45c2-b340-6f09a3e09786",
+        "transactionHash": "0533910a-50ab-4331-a756-497cc9e4c1da",
         "metadata": {
           "ideaTitle": "LiFi Radar Image Recognition",
           "ideaDisclosureNumber": "D2018-2134"
